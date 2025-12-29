@@ -16,7 +16,7 @@ const HeroSection = () => {
       ref={containerRef}
       className="relative h-screen flex flex-col lg:flex-row overflow-hidden"
     >
-     {/* City Section */}
+      {/* City Section */}
       <div
         className="relative flex-1 overflow-hidden group transition-all duration-500"
         onMouseEnter={() => setHoveredSide("city")}
@@ -24,32 +24,61 @@ const HeroSection = () => {
       >
         {/* Background Image - Normal by default, enhanced on hover */}
         <div
-          className={`absolute inset-0 bg-cover bg-center transition-all duration-[1.2s] ease-out
-            ${hoveredSide === "city" ? "scale-110 saturate-125 contrast-110" : "scale-100 saturate-100 contrast-100 opacity-90"}`}
+          className={`absolute inset-0 bg-cover bg-center transition-all duration-[1.2s] ease-out filter
+    grayscale brightness-90
+    group-hover:grayscale-0 group-hover:brightness-100
+    ${
+      hoveredSide === "city"
+        ? "scale-110 saturate-125 contrast-110"
+        : "scale-100"
+    }
+  `}
           style={{ backgroundImage: `url(${cityHero})` }}
         />
-        
+
         {/* Soft Overlays */}
-        <div className={`absolute inset-0 bg-sky-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
-        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-sky-500/10 to-transparent" />
+        <div
+          className={`absolute inset-0 bg-sky-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-sky-500/10 to-transparent" />
 
         <div className="relative z-10 h-full flex flex-col justify-end p-8 lg:p-20">
           <div className="max-w-md">
-            <div className={`flex items-center gap-2 mb-4 transition-all duration-500 ${hoveredSide === "city" ? "translate-x-0" : "-translate-x-4 opacity-70"}`}>
+            <div
+              className={`flex items-center gap-2 mb-4 transition-all duration-500 ${
+                hoveredSide === "city"
+                  ? "translate-x-0"
+                  : "-translate-x-4 opacity-70"
+              }`}
+            >
               <FaCity className="text-white w-5 h-5" />
-              <span className="text-white text-xs font-bold tracking-[0.2em] uppercase">Urban Living</span>
+              <span className="text-white text-xs font-bold tracking-[0.2em] uppercase">
+                Urban Living
+              </span>
             </div>
 
             <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              The <span className={`transition-all duration-500 ${hoveredSide === "city" ? "text-sky-400" : "text-white"}`}>City</span>
+              The{" "}
+              <span
+                className={`transition-all duration-500 ${
+                  hoveredSide === "city" ? "text-sky-400" : "text-white"
+                }`}
+              >
+                City
+              </span>
             </h2>
 
-            <p className={`text-white/90 text-base lg:text-lg mb-8 transition-all duration-500  `}>
-              Experience the pulse of modern life. Where innovation meets ambition and dreams become reality.
+            <p
+              className={`text-white/90 text-base lg:text-lg mb-8 transition-all duration-500  `}
+            >
+              Experience the pulse of modern life. Where innovation meets
+              ambition and dreams become reality.
             </p>
 
             <button className="flex items-center gap-4 text-white group/btn">
-              <span className="font-semibold text-sm tracking-widest uppercase">Explore City</span>
+              <span className="font-semibold text-sm tracking-widest uppercase">
+                Explore City
+              </span>
               <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center transition-all duration-300 group-hover/btn:bg-white group-hover/btn:text-black group-hover/btn:scale-110">
                 <FiArrowRight />
               </div>
@@ -63,7 +92,7 @@ const HeroSection = () => {
         <div className="relative flex items-center justify-center">
           {/* Animated Rings */}
           <div className="absolute w-40 h-40 lg:w-100 lg:h-100 border border-white/60 rounded-full animate-[spin_20s_linear_infinite]" />
-          <div className="absolute w-32 h-32 lg:w-88 lg:h-88 border border-white/50 rounded-full animate-[spin_15s_linear_infinite_reverse]" /> 
+          <div className="absolute w-32 h-32 lg:w-88 lg:h-88 border border-white/50 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
           <div className="w-20 h-20 lg:w-60 lg:h-60 rounded-2xl bg-white/90 backdrop-blur-xl shadow-2xl flex items-center justify-center border border-white/40">
             <img
               src={Logo}
@@ -76,39 +105,68 @@ const HeroSection = () => {
         </div>
       </div>
 
-        {/* Village Section */}
+      {/* Village Section */}
       <div
         className="relative flex-1 overflow-hidden group transition-all duration-500"
         onMouseEnter={() => setHoveredSide("village")}
         onMouseLeave={() => setHoveredSide(null)}
       >
         <div
-          className={`absolute inset-0 bg-cover bg-center transition-all duration-[1.2s] ease-out
-            ${hoveredSide === "village" ? "scale-110 saturate-125 contrast-110" : "scale-100 saturate-100 contrast-100 opacity-90"}`}
+          className={`absolute inset-0 bg-cover bg-center transition-all duration-[1.2s] ease-out filter
+    grayscale brightness-90
+    group-hover:grayscale-0 group-hover:brightness-100
+    ${
+      hoveredSide === "city"
+        ? "scale-110 saturate-125 contrast-110"
+        : "scale-100"
+    }
+  `}
           style={{ backgroundImage: `url(${villageHero})` }}
         />
 
         {/* Soft Overlays */}
-        <div className={`absolute inset-0 bg-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
+        <div
+          className={`absolute inset-0 bg-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
+        />
         <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
 
         <div className="relative z-10 h-full flex flex-col justify-end p-8 lg:p-20 lg:items-end lg:text-right">
           <div className="max-w-md">
-            <div className={`flex items-center gap-2 mb-4 lg:justify-end transition-all duration-500 ${hoveredSide === "village" ? "translate-x-0" : "translate-x-4 opacity-70"}`}>
-              <span className="text-white text-xs font-bold tracking-[0.2em] uppercase order-2">Rural Living</span>
+            <div
+              className={`flex items-center gap-2 mb-4 lg:justify-end transition-all duration-500 ${
+                hoveredSide === "village"
+                  ? "translate-x-0"
+                  : "translate-x-4 opacity-70"
+              }`}
+            >
+              <span className="text-white text-xs font-bold tracking-[0.2em] uppercase order-2">
+                Rural Living
+              </span>
               <GiTreeBranch className="text-white w-5 h-5 order-1" />
             </div>
 
             <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              The <span className={`transition-all duration-500 ${hoveredSide === "village" ? "text-amber-400" : "text-white"}`}>Village</span>
+              The{" "}
+              <span
+                className={`transition-all duration-500 ${
+                  hoveredSide === "village" ? "text-amber-400" : "text-white"
+                }`}
+              >
+                Village
+              </span>
             </h2>
 
-            <p className={`text-white/90 text-base lg:text-lg mb-8 transition-all duration-500  `}>
-              Embrace the tranquility of nature. Where time flows gently and peace finds its home.
+            <p
+              className={`text-white/90 text-base lg:text-lg mb-8 transition-all duration-500  `}
+            >
+              Embrace the tranquility of nature. Where time flows gently and
+              peace finds its home.
             </p>
 
             <button className="flex items-center gap-4 text-white group/btn lg:flex-row-reverse">
-              <span className="font-semibold text-sm tracking-widest uppercase">Discover Village</span>
+              <span className="font-semibold text-sm tracking-widest uppercase">
+                Discover Village
+              </span>
               <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center transition-all duration-300 group-hover/btn:bg-white group-hover/btn:text-black group-hover/btn:scale-110">
                 <FiArrowRight />
               </div>

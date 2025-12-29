@@ -1,3 +1,15 @@
  @import "tailwindcss";
 
+ body{
+    margin: 0;
+    padding: 0;
+ }
+
+ .text-color{
+    color: #4d633c;
+ }
  
+ .bg-color{
+    background: #4d633c;
+    color: white;
+ }

@@ -19,35 +19,35 @@ const Footer = () => {
     { name: "Contact", href: "#" },
   ];
 
-  const footerSections = [
-    {
-      title: "About Us",
-      links: [
-        { name: "Our Story", href: "#" },
-        { name: "Mission & Vision", href: "#" },
-        { name: "Our Team", href: "#" },
-        { name: "Careers", href: "#" },
-      ],
-    },
-    {
-      title: "Our Philosophy",
-      links: [
-        { name: "Balance in Life", href: "#" },
-        { name: "Sustainable Living", href: "#" },
-        { name: "Community First", href: "#" },
-        { name: "Innovation", href: "#" },
-      ],
-    },
-    {
-      title: "Services",
-      links: [
-        { name: "City Tours", href: "#" },
-        { name: "Village Retreats", href: "#" },
-        { name: "Corporate Events", href: "#" },
-        { name: "Consultation", href: "#" },
-      ],
-    },
-  ];
+const footerSections = [
+  {
+    title: "Urban Gam",
+    links: [
+      { name: "About Urban ગામ", href: "/about" },
+      { name: "The Living Experience", href: "/living-experience" },
+      { name: "Wellness", href: "/wellness" },
+      { name: "Location", href: "/location" },
+    ],
+  },
+  {
+    title: "Living & Community",
+    links: [
+      { name: "Homes & Layouts", href: "/homes-layouts" },
+      { name: "Managed Living & Rentals", href: "/managed-living" },
+      { name: "Events & Celebrations", href: "/events" },
+      { name: "Gallery", href: "/gallery" },
+    ],
+  },
+  {
+    title: "Explore More",
+    links: [
+      { name: "Investment Opportunities", href: "/investment" },
+      { name: "Blog", href: "/blog" },
+      { name: "Contact / Enquire", href: "/contact" },
+    ],
+  },
+];
+
 
   const socialLinks = [
     { icon: FaFacebookF, href: "#", label: "Facebook" },
@@ -125,7 +125,7 @@ const Footer = () => {
           <div className="lg:col-span-6 grid grid-cols-2 md:grid-cols-3 gap-12">
             {footerSections.map((section) => (
               <div key={section.title}>
-                <h4 className="text-slate-900 text-xs font-bold tracking-[0.2em] uppercase mb-8">
+                <h4 className="text-slate-900 font-bold mb-8">
                   {section.title}
                 </h4>
                 <ul className="space-y-4">
@@ -136,7 +136,7 @@ const Footer = () => {
                         className="group flex items-center text-slate-500 hover:text-[#5e6c36] transition-colors duration-300"
                       >
                         <span className="w-0 group-hover:w-4 h-px bg-[#5e6c36] transition-all duration-300 mr-0 group-hover:mr-2" />
-                        <span className="text-sm font-medium">{link.name}</span>
+                        <span className=" font-medium">{link.name}</span>
                       </a>
                     </li>
                   ))}
@@ -146,7 +146,7 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-slate-900 text-xs font-bold tracking-[0.2em] uppercase mb-8">
+            <h4 className="text-slate-900 font-bold mb-8">
               Follow Us
             </h4>
             <div className="flex items-center gap-4">
