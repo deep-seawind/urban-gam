@@ -44,7 +44,7 @@ const HeroSection = () => {
               The <span className={`transition-all duration-500 ${hoveredSide === "city" ? "text-sky-400" : "text-white"}`}>City</span>
             </h2>
 
-            <p className={`text-white/90 text-base lg:text-lg mb-8 transition-all duration-500 ${hoveredSide === "city" ? "opacity-100" : "opacity-0 translate-y-4"}`}>
+            <p className={`text-white/90 text-base lg:text-lg mb-8 transition-all duration-500  `}>
               Experience the pulse of modern life. Where innovation meets ambition and dreams become reality.
             </p>
 
@@ -103,7 +103,7 @@ const HeroSection = () => {
               The <span className={`transition-all duration-500 ${hoveredSide === "village" ? "text-amber-400" : "text-white"}`}>Village</span>
             </h2>
 
-            <p className={`text-white/90 text-base lg:text-lg mb-8 transition-all duration-500 ${hoveredSide === "village" ? "opacity-100" : "opacity-0 translate-y-4"}`}>
+            <p className={`text-white/90 text-base lg:text-lg mb-8 transition-all duration-500  `}>
               Embrace the tranquility of nature. Where time flows gently and peace finds its home.
             </p>
 
