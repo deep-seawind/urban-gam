@@ -8,7 +8,7 @@ const Header = () => {
     { name: "Homes & Layouts", path: "/homes-layouts" },
     { name: "Gallery", path: "/gallery" },
     { name: "Blog", path: "/blog" },
-    { name: "Contact Us", path: "/contact" },
+    { name: "Contact Us", path: "/contactus" },
   ];
   return (
     <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur border-b border-slate-200">
@@ -16,13 +16,19 @@ const Header = () => {
         {/* Logo */}
 
         <Link to={"/"}>
-        <div className="font-bold text-xl tracking-wide">
-          <img src={Logo} alt="" className="w-20 rounded-lg" />
-        </div>
+          <div className="absolute top-5 font-bold text-xl tracking-wide">
+            <div className="p-0.5 rounded-xl bg-linear-to-br from-[#4d633c]/90 via-[#6b8e4e]/80 to-[#c09745]/80 shadow-lg">
+              <img
+                src={Logo}
+                alt="Urban Gam Logo"
+                className="w-34 rounded-xl border-2 border-white/40 bg-white/80 backdrop-blur-sm"
+              />
+            </div>
+          </div>
         </Link>
 
         {/* Navigation */}
-        <nav className="hidden lg:flex gap-10">
+        <nav className="hidden lg:flex gap-10 justify-center py-6">
           {navMenu.map((item) => (
             <Link
               key={item.name}

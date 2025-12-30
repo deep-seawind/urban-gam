@@ -38,9 +38,9 @@ const HeroSection = () => {
 
         {/* Soft Overlays */}
         <div
-          className={`absolute inset-0 bg-sky-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
+          className={`absolute inset-0 bg-sky-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
         />
-        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-sky-500/10 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
 
         <div className="relative z-10 h-full flex flex-col justify-end p-8 lg:p-20">
           <div className="max-w-md">
@@ -57,14 +57,14 @@ const HeroSection = () => {
               </span>
             </div>
 
-            <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               The{" "}
               <span
                 className={`transition-all duration-500 ${
                   hoveredSide === "city" ? "text-sky-400" : "text-white"
                 }`}
               >
-                City
+                City <span className="font-light opacity-80">| શહેર</span>
               </span>
             </h2>
 
@@ -115,12 +115,11 @@ const HeroSection = () => {
           className={`absolute inset-0 bg-cover bg-center transition-all duration-[1.2s] ease-out filter
     grayscale brightness-90
     group-hover:grayscale-0 group-hover:brightness-100
-    ${
-      hoveredSide === "city"
-        ? "scale-110 saturate-125 contrast-110"
-        : "scale-100"
-    }
-  `}
+            ${
+              hoveredSide === "village"
+                ? "scale-110 saturate-125 contrast-110"
+                : "scale-100 saturate-100 contrast-100 opacity-90"
+            }`}
           style={{ backgroundImage: `url(${villageHero})` }}
         />
 
@@ -131,7 +130,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
 
         <div className="relative z-10 h-full flex flex-col justify-end p-8 lg:p-20 lg:items-end lg:text-right">
-          <div className="max-w-md">
+          <div className="max-w-lg">
             <div
               className={`flex items-center gap-2 mb-4 lg:justify-end transition-all duration-500 ${
                 hoveredSide === "village"
@@ -152,7 +151,7 @@ const HeroSection = () => {
                   hoveredSide === "village" ? "text-amber-400" : "text-white"
                 }`}
               >
-                Village
+                Village <span className="font-light opacity-80">| ગામ</span>
               </span>
             </h2>
 

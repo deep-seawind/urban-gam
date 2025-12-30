@@ -43,7 +43,7 @@ const footerSections = [
     links: [
       { name: "Investment Opportunities", href: "/investment" },
       { name: "Blog", href: "/blog" },
-      { name: "Contact / Enquire", href: "/contact" },
+      { name: "Contact Us", href: "/contact" },
     ],
   },
 ];
@@ -94,7 +94,7 @@ const footerSections = [
   return (
     <footer
       ref={footerRef}
-      className="relative bg-white pt-12 border-t border-slate-100 overflow-hidden"
+      className="relative bg-zinc-200 pt-12 border-t border-slate-100 overflow-hidden"
     >
       {/* Background Image Layer with White Opacity */}
       <div className="absolute inset-0 z-0">

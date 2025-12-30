@@ -5,7 +5,7 @@ const Breadcrumb = ({ items = [] }) => {
   return (
     <div className="relative w-full pt-22">
       {/* Background Accent */}
-      <div className="absolute inset-0 bg-linear-to-r from-[#c09745]/10 via-transparent to-[#c09745]/10 blur-xl" />
+      <div className="absolute inset-0 bg-linear-to-r from-[#c09745]/20 via-transparent to-green-800/20 blur-xl" />
 
       <nav
         aria-label="Breadcrumb"
