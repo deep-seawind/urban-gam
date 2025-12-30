@@ -6,6 +6,7 @@ import { FiMail, FiPhone, FiMapPin, FiArrowUp } from "react-icons/fi";
 import { FaXTwitter } from "react-icons/fa6";
 import Logo from "../../assets/logo/logo-1.png";
 import BackgroundImage from "../../assets/footer/footer-bg-1.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -131,13 +132,13 @@ const footerSections = [
                 <ul className="space-y-4">
                   {section.links.map((link) => (
                     <li key={link.name}>
-                      <a
-                        href={link.href}
+                      <Link
+                        to={link.href}
                         className="group flex items-center text-slate-500 hover:text-[#5e6c36] transition-colors duration-300"
                       >
                         <span className="w-0 group-hover:w-4 h-px bg-[#5e6c36] transition-all duration-300 mr-0 group-hover:mr-2" />
                         <span className=" font-medium">{link.name}</span>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
