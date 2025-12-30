@@ -1,6 +1,7 @@
 import { FaCity } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 import cityHero from "../../../../assets/hero/city-hero.jpg";
+import { Link } from "react-router-dom";
 
 const CityHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
   return (
@@ -53,17 +54,20 @@ const CityHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
           </h2>
 
           <p className="text-white/90 text-lg mb-8">
-            Experience the pulse of modern life. <br /> Where innovation meets ambition.
+            Experience the pulse of modern life. <br /> Where innovation meets
+            ambition.
           </p>
 
-          <button className="flex items-center gap-4 text-white">
-            <span className="font-semibold text-sm tracking-widest uppercase">
-              Explore City
-            </span>
-            <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center">
-              <FiArrowRight />
-            </div>
-          </button>
+          <Link to={"/about"}>
+            <button className="flex items-center gap-4 text-white cursor-pointer">
+              <span className="font-semibold text-sm tracking-widest uppercase">
+                Explore City
+              </span>
+              <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center">
+                <FiArrowRight />
+              </div>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

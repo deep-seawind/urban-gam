@@ -159,6 +159,61 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
+
+          {/* --- NEW SECTION: THE ARCHITECTURAL LEGACY (WORLD-CLASS UI) --- */}
+          <div className="mt-40 mb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+              
+              {/* Left: Cinematic Stats */}
+              <div className="lg:col-span-5 order-2 lg:order-1">
+                <div className="grid grid-cols-2 gap-8">
+                  {[
+                    { label: "Acres of Greenery", val: "40+", suffix: "ha" },
+                    { label: "Happy Families", val: "250", suffix: "+" },
+                    { label: "Design Awards", val: "12", suffix: "" },
+                    { label: "Years of Trust", val: "15", suffix: "yrs" }
+                  ].map((stat, i) => (
+                    <div key={i} className="group cursor-default">
+                      <div className="text-5xl font-light text-slate-900 mb-2 flex items-baseline">
+                        <span className="group-hover:text-[#c09745] transition-colors duration-500">{stat.val}</span>
+                        <span className="text-xl text-[#c09745] ml-1">{stat.suffix}</span>
+                      </div>
+                      <div className="h-px w-8 bg-[#c09745] mb-4 group-hover:w-full transition-all duration-700" />
+                      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="mt-16 p-8 bg-[#fdfaf5] border-l-4 border-[#c09745] rounded-r-3xl">
+                  <p className="text-slate-600 italic font-serif text-lg">
+                    "Our architecture is a response to the land, a dialogue between the sky and the soil of Surat."
+                  </p>
+                </div>
+              </div>
+
+              {/* Right: Floating Aesthetic Composition */}
+              <div className="lg:col-span-7 order-1 lg:order-2">
+                <div className="relative">
+                  {/* Main Image */}
+                  <div className="relative rounded-[4rem] overflow-hidden aspect-4/2 shadow-2xl z-10 group">
+                    <img 
+                      src="https://i.pinimg.com/1200x/42/3a/63/423a63d412493d69d57b5dbde8cc8849.jpg" 
+                      alt="Modern Architecture" 
+                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-900/40 to-transparent" />
+                  </div>
+                  
+                  {/* Floating Elements */}
+                  <div className="absolute -top-10 -right-10 w-48 h-48 bg-[#c09745] rounded-[3rem] -z-0 hidden md:block animate-pulse opacity-20" />
+                    
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </section>
     </>

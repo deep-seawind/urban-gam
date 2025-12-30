@@ -1,6 +1,7 @@
 import { GiTreeBranch } from "react-icons/gi";
 import { FiArrowRight } from "react-icons/fi";
 import villageHero from "../../../../assets/hero/village-hero.jpg";
+import { Link } from "react-router-dom";
 
 const VillageHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
   return (
@@ -53,17 +54,20 @@ const VillageHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
           </h2>
 
           <p className="text-white/90 text-lg mb-8">
-            Embrace the tranquility of nature. <br /> Where peace finds its home.
+            Embrace the tranquility of nature. <br />
+            Where peace finds its home.
           </p>
 
-          <button className="flex items-center gap-4 text-white justify-end">
-            <span className="font-semibold text-sm tracking-widest uppercase">
-              Discover Village
-            </span>
-            <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center">
-              <FiArrowRight />
-            </div>
-          </button>
+          <Link to={"/about"}>
+            <button className="flex items-center gap-4 text-white justify-end cursor-pointer">
+              <span className="font-semibold text-sm tracking-widest uppercase">
+                Discover Village
+              </span>
+              <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center">
+                <FiArrowRight />
+              </div>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

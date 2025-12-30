@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 // React Icons
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterestP } from "react-icons/fa";
 import { FiMail, FiPhone, FiMapPin, FiArrowUp } from "react-icons/fi";
 import { FaXTwitter } from "react-icons/fa6";
 import Logo from "../../assets/logo/logo-1.png";
@@ -55,6 +55,7 @@ const footerSections = [
     { icon: FaXTwitter, href: "#", label: "Twitter" },
     { icon: FaInstagram, href: "#", label: "Instagram" },
     { icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
+    { icon: FaPinterestP, href: "#", label: "Pinterest" },
   ];
 
   // Scroll-triggered animation
@@ -152,13 +153,13 @@ const footerSections = [
             </h4>
             <div className="flex items-center gap-2">
               {socialLinks.map((social) => (
-                <a
+                <Link
                   key={social.label}
-                  href={social.href}
+                  to={social.href}
                   className="w-12 h-12 rounded-2xl bg-[#5e6c36] border border-slate-100 flex items-center justify-center text-white hover:bg-white hover:text-[#5e6c36] hover:border-[#5e6c36] hover:-translate-y-2 transition-all duration-500"
                 >
                   <social.icon className="w-20 h-5" />
-                </a>
+                </Link>
               ))}
             </div>
           </div>

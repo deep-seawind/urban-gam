@@ -8,7 +8,7 @@ import {
   HiOutlineArrowLongRight,
 } from "react-icons/hi2";
 import Breadcrumb from "../../../Common/Breadcrumb/Breadcrumb";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterestP } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const ContactUs = () => {
@@ -19,6 +19,7 @@ const ContactUs = () => {
     { icon: FaXTwitter, href: "#", label: "Twitter" },
     { icon: FaInstagram, href: "#", label: "Instagram" },
     { icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
+    { icon: FaPinterestP, href: "#", label: "Pinterest" },
   ];
 
   return (
@@ -64,7 +65,7 @@ const ContactUs = () => {
           </div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 lg:px-16 pt-20 pb-20">
+        <div className="relative z-10 container mx-auto px-6 lg:px-0 pt-20 pb-20">
           {/* --- SECTION 1: THE STATEMENT HEADER --- */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20 items-end">
             <div className=" not-only-of-type:">
