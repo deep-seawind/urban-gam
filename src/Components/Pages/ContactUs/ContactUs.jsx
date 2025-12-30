@@ -14,12 +14,13 @@ import { FaXTwitter } from "react-icons/fa6";
 const ContactUs = () => {
   const [activeSide, setActiveSide] = useState(null);
 
+
   const socialLinks = [
-    { icon: FaFacebookF, href: "#", label: "Facebook" },
-    { icon: FaXTwitter, href: "#", label: "Twitter" },
-    { icon: FaInstagram, href: "#", label: "Instagram" },
-    { icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
-    { icon: FaPinterestP, href: "#", label: "Pinterest" },
+    { icon: FaFacebookF, href: "https://www.facebook.com/urbangam.india", label: "Facebook" },
+    { icon: FaXTwitter, href: "https://x.com/urbangamindia", label: "X" },
+    { icon: FaInstagram, href: "https://www.instagram.com/urbangam.india/", label: "Instagram" },
+    { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/urban-gam/", label: "LinkedIn" },
+    { icon: FaPinterestP, href: "https://in.pinterest.com/urbangamindia/", label: "Pinterest" },
   ];
 
   return (
@@ -226,6 +227,7 @@ const ContactUs = () => {
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
                   className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-color hover:bg-white hover:text-[#5e6c36] hover:border-[#5e6c36] hover:-translate-y-2 transition-all duration-500"
                 >
                   <social.icon className="w-5 h-5" />

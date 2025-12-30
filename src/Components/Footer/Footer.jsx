@@ -51,11 +51,11 @@ const footerSections = [
 
 
   const socialLinks = [
-    { icon: FaFacebookF, href: "#", label: "Facebook" },
-    { icon: FaXTwitter, href: "#", label: "Twitter" },
-    { icon: FaInstagram, href: "#", label: "Instagram" },
-    { icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
-    { icon: FaPinterestP, href: "#", label: "Pinterest" },
+    { icon: FaFacebookF, href: "https://www.facebook.com/urbangam.india", label: "Facebook" },
+    { icon: FaXTwitter, href: "https://x.com/urbangamindia", label: "X" },
+    { icon: FaInstagram, href: "https://www.instagram.com/urbangam.india/", label: "Instagram" },
+    { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/urban-gam/", label: "LinkedIn" },
+    { icon: FaPinterestP, href: "https://in.pinterest.com/urbangamindia/", label: "Pinterest" },
   ];
 
   // Scroll-triggered animation
@@ -96,7 +96,7 @@ const footerSections = [
   return (
     <footer
       ref={footerRef}
-      className="relative bg-zinc-200 pt-12 border-t border-slate-100 overflow-hidden"
+      className="relative bg-zinc-200 pt-8 border-t border-slate-100 overflow-hidden"
     >
       {/* Background Image Layer with White Opacity */}
       <div className="absolute inset-0 z-0">
@@ -108,7 +108,7 @@ const footerSections = [
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-9 gap-16 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-9 gap-16 lg:gap-8 mb-10">
           <div className="lg:col-span-2 space-y-8">
             <div className="inline-block relative">
               <img
@@ -118,16 +118,16 @@ const footerSections = [
               />
             </div>
 
-            <p className="text-slate-500 leading-relaxed text-sm">
+            {/* <p className="text-slate-500 leading-relaxed text-sm">
               URBAN ગામ brings urban understanding and village calm together. A
               lifestyle philosophy rooted in balance, silence, and simplicity.
-            </p>
+            </p> */}
           </div>
 
           <div className="lg:col-span-5 grid grid-cols-2 md:grid-cols-3 gap-12">
             {footerSections.map((section) => (
               <div key={section.title}>
-                <h4 className="text-slate-900 font-bold mb-8 text-lg">
+                <h4 className="text-slate-900 font-bold mb-5 text-lg">
                   {section.title}
                 </h4>
                 <ul className="space-y-4">
@@ -156,6 +156,7 @@ const footerSections = [
                 <Link
                   key={social.label}
                   to={social.href}
+                  target="_blank"
                   className="w-12 h-12 rounded-2xl bg-[#5e6c36] border border-slate-100 flex items-center justify-center text-white hover:bg-white hover:text-[#5e6c36] hover:border-[#5e6c36] hover:-translate-y-2 transition-all duration-500"
                 >
                   <social.icon className="w-20 h-5" />
@@ -175,7 +176,7 @@ const footerSections = [
           </button>
         </div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
           <div className="p-8 rounded-4xl bg-[#fffdf4]/30 border hover:border-slate-300 border-[#5e6c36] transition-colors duration-500 group space-x-10 flex items-center">
             <div className="w-12 h-12 rounded-xl group-hover:bg-white shadow-sm flex items-center justify-center bg-[#5e6c36] transition-colors duration-500">
               <FiMail className="w-5 h-5 group-hover:text-[#5e6c36] text-white" />
