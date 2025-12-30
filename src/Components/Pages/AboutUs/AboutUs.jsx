@@ -207,7 +207,7 @@ const AboutUs = () => {
                   </div>
                   
                   {/* Floating Elements */}
-                  <div className="absolute -top-10 -right-10 w-48 h-48 bg-[#c09745] rounded-[3rem] -z-0 hidden md:block animate-pulse opacity-20" />
+                  <div className="absolute -top-10 -right-10 w-48 h-48 bg-[#c09745] rounded-[3rem] z-0 hidden md:block animate-pulse opacity-20" />
                     
                 </div>
               </div>
