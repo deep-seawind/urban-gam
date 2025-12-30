@@ -1,7 +1,12 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 // React Icons
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterestP } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPinterestP,
+} from "react-icons/fa";
 import { FiMail, FiPhone, FiMapPin, FiArrowUp } from "react-icons/fi";
 import { FaXTwitter } from "react-icons/fa6";
 import Logo from "../../assets/logo/logo-1.png";
@@ -20,42 +25,57 @@ const Footer = () => {
     { name: "Contact", href: "#" },
   ];
 
-const footerSections = [
-  {
-    title: "Urban Gam",
-    links: [
-      { name: "About Urban ગામ", href: "/about" },
-      { name: "The Living Experience", href: "/living-experience" },
-      { name: "Wellness", href: "/wellness" },
-      { name: "Location", href: "/location" },
-    ],
-  },
-  {
-    title: "Living & Community",
-    links: [
-      { name: "Homes & Layouts", href: "/homes-layouts" },
-      { name: "Managed Living & Rentals", href: "/managed-living" },
-      { name: "Events & Celebrations", href: "/events" },
-      { name: "Gallery", href: "/gallery" },
-    ],
-  },
-  {
-    title: "Explore More",
-    links: [
-      { name: "Investment Opportunities", href: "/investment" },
-      { name: "Blog", href: "/blog" },
-      { name: "Contact Us", href: "/contact" },
-    ],
-  },
-];
-
+  const footerSections = [
+    {
+      title: "Urban Gam",
+      links: [
+        { name: "About Urban ગામ", href: "/about" },
+        { name: "The Living Experience", href: "/living-experience" },
+        { name: "Wellness", href: "/wellness" },
+        { name: "Location", href: "/location" },
+      ],
+    },
+    {
+      title: "Living & Community",
+      links: [
+        { name: "Homes & Layouts", href: "/homes-layouts" },
+        { name: "Managed Living & Rentals", href: "/managed-living" },
+        { name: "Events & Celebrations", href: "/events" },
+        { name: "Gallery", href: "/gallery" },
+      ],
+    },
+    {
+      title: "Explore More",
+      links: [
+        { name: "Investment Opportunities", href: "/investment" },
+        { name: "Blog", href: "/blog" },
+        { name: "Contact Us", href: "/contact" },
+      ],
+    },
+  ];
 
   const socialLinks = [
-    { icon: FaFacebookF, href: "https://www.facebook.com/urbangam.india", label: "Facebook" },
+    {
+      icon: FaFacebookF,
+      href: "https://www.facebook.com/urbangam.india",
+      label: "Facebook",
+    },
     { icon: FaXTwitter, href: "https://x.com/urbangamindia", label: "X" },
-    { icon: FaInstagram, href: "https://www.instagram.com/urbangam.india/", label: "Instagram" },
-    { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/urban-gam/", label: "LinkedIn" },
-    { icon: FaPinterestP, href: "https://in.pinterest.com/urbangamindia/", label: "Pinterest" },
+    {
+      icon: FaInstagram,
+      href: "https://www.instagram.com/urbangam.india/",
+      label: "Instagram",
+    },
+    {
+      icon: FaLinkedinIn,
+      href: "https://www.linkedin.com/company/urban-gam/",
+      label: "LinkedIn",
+    },
+    {
+      icon: FaPinterestP,
+      href: "https://in.pinterest.com/urbangamindia/",
+      label: "Pinterest",
+    },
   ];
 
   // Scroll-triggered animation
@@ -127,7 +147,7 @@ const footerSections = [
           <div className="lg:col-span-5 grid grid-cols-2 md:grid-cols-3 gap-12">
             {footerSections.map((section) => (
               <div key={section.title}>
-                <h4 className="text-slate-900 font-bold mb-5 text-lg">
+                <h4 className="text-slate-900 font-semibold mb-5 text-lg">
                   {section.title}
                 </h4>
                 <ul className="space-y-4">
@@ -148,9 +168,7 @@ const footerSections = [
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-slate-900 font-bold mb-8 text-lg">
-              Follow Us
-            </h4>
+            <h4 className="text-slate-900 font-bold mb-8 text-lg">Follow Us</h4>
             <div className="flex items-center gap-2">
               {socialLinks.map((social) => (
                 <Link
@@ -178,44 +196,44 @@ const footerSections = [
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
           <div className="p-8 rounded-4xl bg-[#fffdf4]/30 border hover:border-slate-300 border-[#5e6c36] transition-colors duration-500 group space-x-10 flex items-center">
-            <div className="w-12 h-12 rounded-xl group-hover:bg-white shadow-sm flex items-center justify-center bg-[#5e6c36] transition-colors duration-500">
-              <FiMail className="w-5 h-5 group-hover:text-[#5e6c36] text-white" />
+            <div className="w-12 h-12 rounded-xl group-hover:bg-[#c09745] shadow-sm flex items-center justify-center bg-[#5e6c36] transition-colors duration-500">
+              <FiMail className="w-5 h-5 text-white" />
             </div>
 
             <div className="">
-              <p className=" font-bold tracking-widest text-slate-500 mb-1">
-                Email us
-              </p>
+              <p className=" font-bold text-slate-700 mb-1">Email us</p>
               <a
-                href="mailto:hello@urbangam.com"
-                className="text-slate-900 font-bold hover:text-[#5e6c36]"
+                href="mailto:info@urbangam.com"
+                className="text-slate-900 hover:text-[#5e6c36]"
+                target="_blank"
               >
-                hello@urbangam.com
+                info@urbangam.com
               </a>
             </div>
           </div>
 
           <div className="p-8 rounded-4xl bg-[#fffdf4]/30 border hover:border-slate-300 border-[#5e6c36] transition-colors duration-500 group space-x-10 flex items-center">
-            <div className="w-12 h-12 rounded-xl group-hover:bg-white shadow-sm flex items-center justify-center bg-[#5e6c36] transition-colors duration-500">
-              <FiPhone className="w-5 h-5 group-hover:text-[#5e6c36] text-white" />
+            <div className="w-12 h-12 rounded-xl group-hover:bg-[#c09745] shadow-sm flex items-center justify-center bg-[#5e6c36] transition-colors duration-500">
+              <FiPhone className="w-5 h-5   text-white" />
             </div>
-            <div className="">
-              <p className=" font-bold tracking-widest text-slate-500 mb-1">
-                Call us
-              </p>
-              <p className="text-slate-900 font-bold">+91 98765 43210</p>
+            <div>
+              <p className="font-bold text-slate-700 mb-1">Call us</p>
+              <a
+                href="tel:+919876543210"
+                className="text-slate-900 hover:text-[#5e6c36] transition-colors font-medium"
+              >
+                +91 98765 43210
+              </a>
             </div>
           </div>
 
           <div className="p-8 rounded-4xl bg-[#fffdf4]/30 border hover:border-slate-300 border-[#5e6c36] transition-colors duration-500 group space-x-10 flex items-center">
-            <div className="w-12 h-12 rounded-xl group-hover:bg-white shadow-sm flex items-center justify-center bg-[#5e6c36] transition-colors duration-500">
-              <FiMapPin className="w-5 h-5 group-hover:text-[#5e6c36] text-white" />
+            <div className="w-12 h-12 rounded-xl group-hover:bg-[#c09745] shadow-sm flex items-center justify-center bg-[#5e6c36] transition-colors duration-500">
+              <FiMapPin className="w-5 h-5  text-white" />
             </div>
             <div className="">
-              <p className=" font-bold tracking-widest text-slate-500 mb-1">
-                Our Location
-              </p>
-              <p className="text-slate-900 font-bold">Ahmedabad, Gujarat</p>
+              <p className=" font-bold text-slate-700 mb-1">Our Location</p>
+              <p className="text-slate-900">Ahmedabad, Gujarat</p>
             </div>
           </div>
         </div>
@@ -233,7 +251,7 @@ const footerSections = [
                   <a
                     key={item}
                     href="#"
-                    className="text-white/80 hover:text-white text-xs font-bold tracking-wider transition-colors"
+                    className="text-white/80 hover:text-white text-xs tracking-wider transition-colors"
                   >
                     {item}
                   </a>
