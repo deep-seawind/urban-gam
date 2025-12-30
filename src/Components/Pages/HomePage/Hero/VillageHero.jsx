@@ -53,7 +53,7 @@ const VillageHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
           </h2>
 
           <p className="text-white/90 text-lg mb-8">
-            Embrace the tranquility of nature. Where peace finds its home.
+            Embrace the tranquility of nature. <br /> Where peace finds its home.
           </p>
 
           <button className="flex items-center gap-4 text-white justify-end">

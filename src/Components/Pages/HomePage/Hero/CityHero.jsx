@@ -53,7 +53,7 @@ const CityHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
           </h2>
 
           <p className="text-white/90 text-lg mb-8">
-            Experience the pulse of modern life. Where innovation meets ambition.
+            Experience the pulse of modern life. <br /> Where innovation meets ambition.
           </p>
 
           <button className="flex items-center gap-4 text-white">
