@@ -126,7 +126,7 @@ const footerSections = [
           <div className="lg:col-span-5 grid grid-cols-2 md:grid-cols-3 gap-12">
             {footerSections.map((section) => (
               <div key={section.title}>
-                <h4 className="text-slate-900 font-bold mb-8">
+                <h4 className="text-slate-900 font-bold mb-8 text-lg">
                   {section.title}
                 </h4>
                 <ul className="space-y-4">
@@ -147,7 +147,7 @@ const footerSections = [
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-slate-900 font-bold mb-8">
+            <h4 className="text-slate-900 font-bold mb-8 text-lg">
               Follow Us
             </h4>
             <div className="flex items-center gap-2">

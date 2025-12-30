@@ -33,12 +33,12 @@ const ContactUs = () => {
           {/* LEFT IMAGE */}
           <div
             className={`relative bg-cover bg-center transition-all duration-700 ease-out
-      ${
-        activeSide === "left"
-          ? "grayscale-0 saturate-110 contrast-110"
-          : "grayscale opacity-90"
-      }
-    `}
+            ${
+                activeSide === "left"
+                ? "grayscale-0 saturate-110 contrast-110"
+                : "grayscale opacity-90"
+            }
+            `}
             style={{
               backgroundImage: `url(https://i.pinimg.com/1200x/c3/8c/0b/c38c0bd982a2fb1c07e77e84bf340d95.jpg)`,
             }}
@@ -50,12 +50,12 @@ const ContactUs = () => {
           {/* RIGHT IMAGE */}
           <div
             className={`relative bg-cover bg-center transition-all duration-700 ease-out
-      ${
-        activeSide === "right"
-          ? "grayscale-0 saturate-110 contrast-110"
-          : "grayscale opacity-90"
-      }
-    `}
+                ${
+                    activeSide === "right"
+                    ? "grayscale-0 saturate-110 contrast-110"
+                    : "grayscale opacity-90"
+                }
+                `}
             style={{
               backgroundImage: `url(https://i.pinimg.com/1200x/60/28/f6/6028f676bc21e38b5e30984cc5f557c1.jpg)`,
             }}
@@ -207,7 +207,7 @@ const ContactUs = () => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-full md:w-auto bg-slate-900 text-white px-16 py-7 rounded-full text-[10px] font-bold tracking-[0.4em] flex items-center justify-center gap-6 hover:bg-[#c09745] transition-all duration-500 shadow-2xl"
+                      className="w-full md:w-auto bg-slate-900 text-white px-10 py-5 rounded-full font-semibold flex items-center justify-center gap-6 hover:bg-[#c09745] transition-all duration-500 shadow-2xl"
                     >
                       Send Inquiry{" "}
                       <HiOutlineArrowLongRight className="text-xl" />
