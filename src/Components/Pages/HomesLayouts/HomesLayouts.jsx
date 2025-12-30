@@ -42,7 +42,7 @@ const HomesLayouts = () => {
 
   return (
     <>
-      <Breadcrumb items={[{ label: "About Urban ગામ" }]} />
+      <Breadcrumb items={[{ label: "Home Layouts" }]} />
       <section className="bg-white py-16 lg:py-20 overflow-hidden">
         <div className="container mx-auto px-6 lg:px-12">
           {/* --- Header Section --- */}
@@ -50,7 +50,7 @@ const HomesLayouts = () => {
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <span className="w-12 h-0.5 bg-[#c09745]" />
-                <span className="text-[#c09745] text-xs font-bold tracking-[0.4em] ">
+                <span className="text-[#c09745] text-xs font-semibold tracking-[0.4em] ">
                   Collection
                 </span>
               </div>
@@ -72,9 +72,9 @@ const HomesLayouts = () => {
             {homes.map((home, idx) => (
               <div
                 key={idx}
-                className="min-w-[320px] md:min-w-112.5 snap-center group"
+                className="snap-center group"
               >
-                <div className="relative h-100 rounded-[3rem] overflow-hidden mb-8 shadow-2xl transition-transform duration-700 group-hover:scale-[0.98]">
+                <div className="relative lg:h-100 h-80 rounded-[3rem] overflow-hidden mb-8 shadow-2xl transition-transform duration-700 group-hover:scale-[0.98]">
                   <img
                     src={home.image}
                     alt={home.title}
@@ -82,10 +82,10 @@ const HomesLayouts = () => {
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-[#304421] via-transparent to-transparent" />
                   <div className="absolute bottom-10 left-10">
-                    <span className="text-white/70 text-xs font-bold tracking-widest  mb-2 block">
+                    <span className="text-white/70 text-xs font-semibold tracking-widest  mb-2 block">
                       {home.size}
                     </span>
-                    <h3 className="text-3xl font-bold text-white mb-4">
+                    <h3 className="text-3xl font-semibold text-white mb-4">
                       {home.title}
                     </h3>
                     <div className="flex gap-2">
@@ -108,9 +108,9 @@ const HomesLayouts = () => {
           </div>
 
           {/* --- SECTION 3: THE BLUEPRINT PHILOSOPHY (Split Layout) --- */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center mb-30">
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-24 gap-10 items-center lg:mb-30 mb-20">
             <div className="relative">
-              <div className="aspect-4/3 rounded-[4rem] overflow-hidden shadow-2xl">
+              <div className="lg:aspect-4/2 aspect-4/4 rounded-[4rem] overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800"
                   alt="Design"
@@ -118,23 +118,26 @@ const HomesLayouts = () => {
                 />
               </div>
               {/* Floating Glass Card */}
-              <div className="absolute text-center -bottom-12 -right-12 p-5 px-8 bg-white/80 backdrop-blur-3xl rounded-[3rem] shadow-2xl border border-white max-w-xs hidden md:block">
-                <HiOutlineSparkles className="text-[#c09745] text-4xl mb-6 mx-auto" />
-                <p className="text-slate-900 font-bold">
+              <div className="absolute text-center -bottom-10 -right-12 p-5 px-8 bg-white/80 backdrop-blur-3xl rounded-[3rem] shadow-2xl border border-white max-w-xs hidden md:block">
+
+              <div className="flex">
+                <HiOutlineSparkles className="text-[#c09745] text-4xl mx-auto" />
+                <p className="text-slate-900 font-semibold">
                   "Earthy materials meet modern precision."
                 </p>
+                </div>
               </div>
             </div>
 
             <div className="space-y-12">
               <div>
-                <h4 className="text-xs font-bold tracking-[0.4em]  text-[#c09745] mb-6">
+                <h4 className="text-xs font-semibold tracking-[0.4em]  text-[#c09745] mb-6">
                   Philosophy
                 </h4>
-                <h3 className="text-5xl lg:text-6xl font-medium text-slate-900 leading-tight">
+                <h3 className="text-5xl lg:text-5xl font-medium text-slate-900 leading-tight">
                   Limited{" "}
                   <span className="font-serif italic">customization</span> to
-                  protect <span className="font-bold">brand value.</span>
+                  protect <span className="font-semibold">brand value.</span>
                 </h3>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -152,12 +155,12 @@ const HomesLayouts = () => {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="flex flex-col gap-4 group cursor-default"
+                    className="flex items-center gap-4 group cursor-default"
                   >
                     <div className="w-15 h-15 rounded-2xl group-hover:bg-[#304421] text-3xl flex items-center justify-center group-hover:text-white shadow-sm bg-[#c09745] text-white transition-all duration-500">
                       {item.icon}
                     </div>
-                    <span className="text-slate-800 font-bold tracking-tight">
+                    <span className="text-slate-800 font-semibold tracking-tight">
                       {item.title}
                     </span>
                   </div>
@@ -178,10 +181,10 @@ const HomesLayouts = () => {
             />
 
             <div className="relative z-10 text-center space-y-8">
-              <h4 className="text-[#c09745] text-xs font-bold tracking-[0.5em] ">
+              <h4 className="text-[#c09745] text-xs font-semibold tracking-[0.5em] ">
                 Living The Legacy
               </h4>
-              <p className="text-3xl lg:text-4xl text-white font-medium leading-snug max-w-4xl mx-auto">
+              <p className="text-2xl lg:text-4xl text-white font-medium leading-snug max-w-4xl mx-auto">
                 Whether it's a 250 yd retreat or a 1000 yd estate, every inch is
                 designed to{" "}
                 <span className="font-serif italic text-[#c09745]">
@@ -189,14 +192,14 @@ const HomesLayouts = () => {
                 </span>{" "}
                 with nature.
               </p>
-              <button className="inline-flex items-center gap-4 bg-[#c09745] text-white px-10 py-5 rounded-full font-bold hover:bg-white hover:text-slate-950 transition-all duration-500 transform hover:scale-105">
+              <button className="inline-flex items-center gap-4 bg-[#c09745] text-white px-10 py-5 rounded-full font-semibold hover:bg-white hover:text-slate-950 transition-all duration-500 transform hover:scale-105">
                 Enquire Now <HiArrowLongRight />
               </button>
             </div>
 
             {/* Animated Background Text */}
             <div className="absolute -bottom-10 left-0 w-full whitespace-nowrap opacity-[0.03] select-none">
-              <span className="text-[12rem] font-bold text-white">
+              <span className="text-[12rem] font-semibold text-white">
                 URBAN ગામ URBAN ગામ URBAN ગામ
               </span>
             </div>
@@ -208,11 +211,11 @@ const HomesLayouts = () => {
               {/* Left: The Visual Layer */}
               <div className="lg:w-7/12 relative group">
                 {/* Decorative Label */}
-                <div className="absolute -top-10 left-10 z-20 bg-white p-6 shadow-xl rounded-2xl border border-slate-100 transform -rotate-3 group-hover:rotate-0 transition-transform duration-700">
+                <div className="absolute -top-10 left-10 z-20 bg-white p-6 shadow-xl rounded-2xl border border-slate-100 transform -rotate-3 group-hover:rotate-0 transition-transform duration-700 lg:block hidden">
                   <p className="text-[#c09745] font-serif italic text-xl">
                     The Sandstone Texture
                   </p>
-                  <p className="text-[10px] font-bold tracking-widest text-slate-400">
+                  <p className="text-[10px] font-semibold tracking-widest text-slate-400">
                     Ethically Sourced
                   </p>
                 </div>
@@ -224,11 +227,11 @@ const HomesLayouts = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[3s]"
                   />
                   {/* Glass Overlay on Image */}
-                  <div className="absolute bottom-8 right-8 p-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-[2.5rem] text-white max-w-xs transition-all duration-700 group-hover:bg-[#c09745]/20">
+                  <div className="absolute bottom-8 right-8 p-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-[2.5rem] text-white max-w-xs transition-all duration-700 group-hover:bg-[#c09745]/20 lg:block hidden">
                     <HiOutlineSun className="text-3xl mb-4 text-[#c09745]" />
                     <p className="text-sm font-light leading-relaxed">
                       Every window is positioned to capture the{" "}
-                      <span className="font-bold">Golden Hour</span>, reducing
+                      <span className="font-semibold">Golden Hour</span>, reducing
                       the need for artificial light.
                     </p>
                   </div>
@@ -241,7 +244,7 @@ const HomesLayouts = () => {
                   <span className="text-[6rem] font-serif italic text-slate-50 absolute -top-16 -left-8 select-none -z-10 opacity-50">
                     Sensory
                   </span>
-                  <h4 className="text-xs font-bold tracking-[0.4em] text-[#c09745] mb-4">
+                  <h4 className="text-xs font-semibold tracking-[0.4em] text-[#c09745] mb-4">
                     Tactile Details
                   </h4>
                   <h3 className="text-5xl font-medium text-slate-900 leading-[1.1]">
@@ -273,7 +276,7 @@ const HomesLayouts = () => {
                         0{i + 1}
                       </div>
                       <div className="pb-6 border-b border-slate-100 w-full group-hover:border-[#c09745]/30 transition-colors">
-                        <h5 className="font-bold text-slate-900 mb-1">
+                        <h5 className="font-semibold text-slate-900 mb-1">
                           {item.title}
                         </h5>
                         <p className="text-slate-500 text-sm">
@@ -292,21 +295,21 @@ const HomesLayouts = () => {
 
           {/* --- SECTION 5: FINAL VISIONARY CTA --- */}
           <div className="relative rounded-[5rem] bg-white p-12 lg:p-10 mt-20 text-center border border-slate-100 shadow-2xl overflow-hidden">
-            <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-full h-full opacity-[0.02] pointer-events-none">
-              <span className="text-[25rem] font-serif font-bold italic">
+            <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-full h-full opacity-[0.02] pointer-events-none">
+              <span className="lg:text-[22rem] text-5xl font-serif font-semibold italic">
                 Urban
               </span>
             </div>
 
             <div className="relative z-10 space-y-8">
-              <h2 className="text-5xl lg:text-5xl font-medium text-slate-900 leading-none">
+              <h2 className="text-4xl lg:text-5xl font-medium text-slate-900 leading-none">
                 Ready to claim <br />
                 <span className="font-serif italic text-[#c09745]">
                   your piece of peace?
                 </span>
               </h2>
               <div className="flex flex-col md:flex-row gap-6 justify-center">
-                <button className="bg-color text-white px-12 py-4 rounded-full font-bold text-xl hover:bg-[#c09745] transition-all duration-500 flex items-center justify-center gap-4 group">
+                <button className="bg-color text-white px-12 py-4 rounded-full font-semibold text-xl hover:bg-[#c09745] transition-all duration-500 flex items-center justify-center gap-4 group">
                   Connect
                   <HiArrowLongRight className="group-hover:translate-x-2 transition-transform" />
                 </button> 

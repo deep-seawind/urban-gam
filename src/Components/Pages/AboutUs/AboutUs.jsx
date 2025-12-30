@@ -10,22 +10,22 @@ const AboutUs = () => {
 
       <section className="relative bg-[#F9F9F9] py-24 lg:py-30 overflow-hidden">
         {/* Editorial Watermark - Large, Elegant Serif */}
-        <div className="absolute top-[-5%] left-1/6 text-[22vw] pt-18 text-center font-serif font-bold text-slate-200/70 select-none pointer-events-none leading-none opacity-50">
+        <div className="absolute top-[-5%] left-1/6 text-[22vw] pt-18 text-center font-serif font-semibold text-slate-200/70 select-none pointer-events-none leading-none opacity-50">
           About
         </div>
 
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           {/* --- Header Section --- */}
           <div className="flex flex-col lg:flex-row gap-20 lg:items-end mb-32">
-            <div className="lg:w-8/12">
+            <div className="lg:w-8/10">
               <div className="flex items-center gap-6 mb-10 overflow-hidden">
                 <span className="w-16 h-0.5 bg-[#c09745] transform origin-left transition-transform duration-1000 group-hover:scale-x-110" />
-                <span className="text-[#c09745] text-[10px] md:text-sm font-bold">
+                <span className="text-[#c09745] text-[10px] md:text-sm font-semibold">
                   About Urban ગામ
                 </span>
               </div>
 
-              <h2 className="text-5xl lg:text-6xl text-slate-900 leading-[1.05] tracking-tight mb-8">
+              <h2 className="text-5xl lg:text-5xl text-slate-900 leading-[1.05] tracking-tight mb-8">
                 Life does not have to
                 <span className="font-serif italic text-[#c09745] relative inline-block ps-3">
                   choose
@@ -44,13 +44,13 @@ const AboutUs = () => {
                   </svg>
                 </span>{" "}
                 between <br />
-                <span className="font-bold text-color">
+                <span className="font-semibold text-color">
                   progress and peace.
                 </span>
               </h2>
             </div>
 
-            <div className="lg:w-4/12 relative">
+            <div className="lg:w-4/8 relative">
               <div className="absolute -left-10 top-0 bottom-0 w-px bg-linear-to-b from-[#c09745] to-transparent hidden lg:block" />
               <p className="text-slate-600 text-xl leading-relaxed">
                 Urban ગામ is built on a simple belief — that modern progress and
@@ -69,7 +69,7 @@ const AboutUs = () => {
               <div className="w-16 h-16 rounded-3xl bg-[#fdfaf5] flex items-center justify-center mb-10 border border-[#c09745]/10 group-hover:bg-[#c09745] group-hover:text-white group-hover:rotate-360 transition-all duration-1000">
                 <FiCompass className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold mb-6 text-slate-900 tracking-tight">
+              <h3 className="text-2xl font-semibold mb-6 text-slate-900 tracking-tight">
                 Thoughtful Planning
               </h3>
               <p className="text-slate-500 leading-relaxed text-lg">
@@ -86,7 +86,7 @@ const AboutUs = () => {
               <div className="w-16 h-16 rounded-3xl bg-[#c09745] text-white flex items-center justify-center mb-10 shadow-lg shadow-[#c09745]/20">
                 <FiLayers className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold mb-6 text-white tracking-tight">
+              <h3 className="text-2xl font-semibold mb-6 text-white tracking-tight">
                 Disciplined Development
               </h3>
               <p className="text-slate-200 leading-relaxed text-lg">
@@ -103,7 +103,7 @@ const AboutUs = () => {
               <div className="w-16 h-16 rounded-3xl bg-[#fdfaf5] flex items-center justify-center mb-10 border border-[#c09745]/10 group-hover:bg-[#c09745] group-hover:text-white transition-all duration-700">
                 <FiRepeat className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold mb-6 text-slate-900 tracking-tight">
+              <h3 className="text-2xl font-semibold mb-6 text-slate-900 tracking-tight">
                 Responsible Growth
               </h3>
               <p className="text-slate-500 leading-relaxed text-lg">
@@ -137,7 +137,7 @@ const AboutUs = () => {
                   <FiAward className="text-[20rem] text-[#c09745]" />
                 </div>
 
-                <h4 className="text-xs font-bold md:text-[13px] tracking-[0.5em] text-[#c09745] mb-10 flex items-center gap-4">
+                <h4 className="text-xs font-semibold md:text-[13px] tracking-[0.5em] text-[#c09745] mb-10 flex items-center gap-4">
                   <span className="w-8 h-px bg-[#c09745]" /> Our Promise
                 </h4>
 

@@ -43,7 +43,7 @@ const BlogDetails = () => {
             alt="Cover"
           />
       {/* --- IMPROVED CINEMATIC GRADIENT OVERLAY --- */}
-<div className="absolute inset-0 bg-linear-to-b from-transparent via-emerald-950/20 to-emerald-950" />
+<div className="absolute inset-0 bg-linear-to-b from-transparent via-emerald-950/50 to-emerald-950" />
 
           <div className="absolute inset-0 flex flex-col justify-end pb-20 px-6 lg:px-12">
             <div className="container mx-auto">
@@ -55,7 +55,7 @@ const BlogDetails = () => {
                 <span className="bg-[#c09745] text-white text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest mb-8 inline-block">
                   {post.category}
                 </span>
-                <h1 className="text-5xl lg:text-8xl text-white font-normal leading-[0.9] tracking-tighter mb-8">
+                <h1 className="text-4xl lg:text-8xl text-white font-normal  mb-8">
                   {post.title}
                 </h1>
                 <p className="text-xl lg:text-xl text-white font-normal leading-relaxed max-w-2xl border-l-2 border-[#c09745] pl-6">

@@ -98,10 +98,10 @@ const Gallery = () => {
           {/* --- HEADER --- */}
           <div className="flex flex-col lg:flex-row justify-between items-end gap-12 mb-24">
             <div className="relative">
-              <h2 className="text-7xl lg:text-9xl font-light text-slate-900 leading-[0.8] tracking-tighter">
-                GALLERY <br />
-                <span className="font-serif italic text-[#c09745] ml-12 lg:ml-32">
-                  STUDIO
+              <h2 className="text-5xl lg:text-7xl font-light text-slate-900 leading-[0.8] tracking-tighter">
+                Gallery 
+                <span className="font-serif italic text-[#c09745] ps-3">
+                  Studio
                 </span>
               </h2>
             </div>
@@ -113,7 +113,7 @@ const Gallery = () => {
                     setActiveCategory(cat);
                     setSelectedIndex(null);
                   }}
-                  className={`px-6 py-3 rounded-full text-[12px] font-bold tracking-widest transition-all duration-500 border ${
+                  className={`px-6 py-3 rounded-full text-[12px] font-semibold tracking-widest transition-all duration-500 border ${
                     activeCategory === cat
                       ? "bg-[#c09745] text-white border-[#c09745]"
                       : "bg-white text-slate-500 border-slate-200"
@@ -214,7 +214,7 @@ const Gallery = () => {
 
                       {/* Caption Box */}
                       <div className="absolute -bottom-20 left-0 right-0 text-center">
-                        <span className="text-[#c09745] font-black text-[10px] tracking-[0.5em] uppercase mb-2 block">
+                        <span className="text-[#c09745] font-semibold text-[10px] tracking-[0.5em] uppercase mb-2 block">
                           {filteredItems[selectedIndex].category}
                         </span>
                         <h3 className="text-3xl lg:text-5xl text-white font-serif italic tracking-tight">
@@ -225,7 +225,7 @@ const Gallery = () => {
                   </AnimatePresence>
 
                   {/* Counter Label */}
-                  <div className="absolute bottom-10 text-white/20 font-black tracking-tighter text-8xl -z-10 select-none">
+                  <div className="absolute bottom-10 text-white/20 font-semibold tracking-tighter text-8xl -z-10 select-none">
                     {selectedIndex + 1} / {filteredItems.length}
                   </div>
                 </div>

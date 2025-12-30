@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { FaCity } from "react-icons/fa";
 import { GiTreeBranch } from "react-icons/gi";
@@ -9,6 +9,16 @@ import Logo from "../../../assets/logo/logo.jpg";
 
 const HeroSection = () => {
   const [hoveredSide, setHoveredSide] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+
   const containerRef = useRef(null);
 
   return (
@@ -21,15 +31,18 @@ const HeroSection = () => {
         className="relative flex-1 overflow-hidden group transition-all duration-500"
         onMouseEnter={() => setHoveredSide("city")}
         onMouseLeave={() => setHoveredSide(null)}
-      >
-        {/* Background Image - Normal by default, enhanced on hover */}
+        onClick={
+          isMobile
+            ? () => setHoveredSide(hoveredSide === "city" ? null : "city")
+            : undefined
+        }
+      > 
         <div
-          className={`absolute inset-0 bg-cover bg-center transition-all duration-[1.2s] ease-out filter
-    grayscale brightness-90
-    group-hover:grayscale-0 group-hover:brightness-100
+          className={`absolute inset-0 bg-cover bg-center transition-all duration-[1.2s] ease-out
+    filter grayscale brightness-90
     ${
       hoveredSide === "city"
-        ? "scale-110 saturate-125 contrast-110"
+        ? "grayscale-0 brightness-100 scale-110 saturate-125 contrast-110"
         : "scale-100"
     }
   `}
@@ -43,7 +56,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
 
         <div className="relative z-10 h-full flex flex-col justify-end p-8 lg:p-20">
-          <div className="max-w-md">
+          <div className="max-w-lg pb-10 lg:pb-0">
             <div
               className={`flex items-center gap-2 mb-4 transition-all duration-500 ${
                 hoveredSide === "city"
@@ -110,18 +123,24 @@ const HeroSection = () => {
         className="relative flex-1 overflow-hidden group transition-all duration-500"
         onMouseEnter={() => setHoveredSide("village")}
         onMouseLeave={() => setHoveredSide(null)}
+        onClick={
+          isMobile
+            ? () => setHoveredSide(hoveredSide === "village" ? null : "village")
+            : undefined
+        }
       >
-        <div
-          className={`absolute inset-0 bg-cover bg-center transition-all duration-[1.2s] ease-out filter
+      <div
+  className={`absolute inset-0 bg-cover bg-center transition-all duration-[1.2s] ease-out filter
     grayscale brightness-90
-    group-hover:grayscale-0 group-hover:brightness-100
-            ${
-              hoveredSide === "village"
-                ? "scale-110 saturate-125 contrast-110"
-                : "scale-100 saturate-100 contrast-100 opacity-90"
-            }`}
-          style={{ backgroundImage: `url(${villageHero})` }}
-        />
+    ${
+      hoveredSide === "village"
+        ? "grayscale-0 brightness-100 scale-110 saturate-125 contrast-110 opacity-100"
+        : "scale-100 saturate-100 contrast-100 opacity-90"
+    }
+  `}
+  style={{ backgroundImage: `url(${villageHero})` }}
+/>
+
 
         {/* Soft Overlays */}
         <div
@@ -130,7 +149,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
 
         <div className="relative z-10 h-full flex flex-col justify-end p-8 lg:p-20 lg:items-end lg:text-right">
-          <div className="max-w-lg">
+          <div className="max-w-lg  ">
             <div
               className={`flex items-center gap-2 mb-4 lg:justify-end transition-all duration-500 ${
                 hoveredSide === "village"
@@ -156,7 +175,7 @@ const HeroSection = () => {
             </h2>
 
             <p
-              className={`text-white/90 text-base lg:text-lg mb-8 transition-all duration-500  `}
+              className={`text-white/90 text-base lg:text-lg mb-8 transition-all duration-500 text-left lg:pl-8`}
             >
               Embrace the tranquility of nature. Where time flows gently and
               peace finds its home.

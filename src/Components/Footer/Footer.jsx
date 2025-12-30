@@ -107,8 +107,8 @@ const footerSections = [
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 mb-20">
-          <div className="lg:col-span-3 space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-9 gap-16 lg:gap-8 mb-16">
+          <div className="lg:col-span-2 space-y-8">
             <div className="inline-block relative">
               <img
                 src={Logo}
@@ -117,13 +117,13 @@ const footerSections = [
               />
             </div>
 
-            <p className="text-slate-500 leading-relaxed max-w-md text-sm">
+            <p className="text-slate-500 leading-relaxed text-sm">
               URBAN ગામ brings urban understanding and village calm together. A
               lifestyle philosophy rooted in balance, silence, and simplicity.
             </p>
           </div>
 
-          <div className="lg:col-span-6 grid grid-cols-2 md:grid-cols-3 gap-12">
+          <div className="lg:col-span-5 grid grid-cols-2 md:grid-cols-3 gap-12">
             {footerSections.map((section) => (
               <div key={section.title}>
                 <h4 className="text-slate-900 font-bold mb-8">
@@ -134,7 +134,7 @@ const footerSections = [
                     <li key={link.name}>
                       <Link
                         to={link.href}
-                        className="group flex items-center text-slate-500 hover:text-[#5e6c36] transition-colors duration-300"
+                        className="group flex items-center text-slate-700 hover:text-[#5e6c36] text-sm transition-colors duration-300"
                       >
                         <span className="w-0 group-hover:w-4 h-px bg-[#5e6c36] transition-all duration-300 mr-0 group-hover:mr-2" />
                         <span className=" font-medium">{link.name}</span>
@@ -146,18 +146,18 @@ const footerSections = [
             ))}
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <h4 className="text-slate-900 font-bold mb-8">
               Follow Us
             </h4>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   className="w-12 h-12 rounded-2xl bg-[#5e6c36] border border-slate-100 flex items-center justify-center text-white hover:bg-white hover:text-[#5e6c36] hover:border-[#5e6c36] hover:-translate-y-2 transition-all duration-500"
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-20 h-5" />
                 </a>
               ))}
             </div>
@@ -225,7 +225,7 @@ const footerSections = [
             <p className="text-white/80 text-sm font-medium">
               © {currentYear} URBAN ગામ
             </p>
-            <div className="flex items-center gap-10">
+            <div className="flex items-center gap-5">
               {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
                 (item) => (
                   <a

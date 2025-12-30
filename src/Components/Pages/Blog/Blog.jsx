@@ -86,9 +86,9 @@ const Blog = () => {
       <section className="bg-[#F8F9FA] py-16 lg:py-20">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="relative mb-24">
-            <h2 className="text-7xl lg:text-9xl font-light text-slate-900 leading-[0.8] tracking-tighter">
-              LATEST
-              <span className="font-serif italic text-[#c09745]">INSIGHTS</span>
+            <h2 className="text-5xl lg:text-7xl font-light text-slate-900 leading-[0.8] tracking-tighter">
+              Latest
+              <span className="font-serif italic text-[#c09745] ps-3">Insights</span>
             </h2>
           </div>
 
@@ -153,13 +153,7 @@ const Blog = () => {
               </Link>
             ))}
           </div>
-
-          {/* --- VIEW ALL ACTION --- */}
-          <div className="mt-20 text-center">
-            <button className="px-12 py-5 rounded-full border border-slate-200 text-slate-900 font-bold hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-500 tracking-widest text-xs">
-              EXPLORE ALL STORIES
-            </button>
-          </div>
+ 
         </div>
       </section>
     </>

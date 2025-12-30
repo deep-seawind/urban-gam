@@ -66,18 +66,18 @@ const ContactUs = () => {
 
         <div className="relative z-10 container mx-auto px-6 lg:px-16 pt-20 pb-20">
           {/* --- SECTION 1: THE STATEMENT HEADER --- */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-20 items-end">
-            <div className="lg:col-span-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20 items-end">
+            <div className=" not-only-of-type:">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="text-7xl md:text-7xl   text-white"
+                className="text-5xl md:text-7xl text-white"
               >
                 Let's Talkreality
               </motion.h1>
             </div>
-            <div className="lg:col-span-4 pb-4">
-              <p className="text-white text-lg leading-relaxed border-l border-[#c09745] pl-8">
+            <div className="  pb-4 lg:pl-10">
+              <p className="text-white text-lg leading-relaxed border-l border-[#c09745] pl-4">
                 We don't just build structures; we curate legacies. Reach out to
                 discuss your next landmark project.
               </p>
@@ -85,10 +85,10 @@ const ContactUs = () => {
           </div>
 
           {/* --- SECTION 2: THE SPLIT EXPERIENCE --- */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             {/* LEFT: MINIMALIST INFO GRID */}
             <div
-              className="lg:col-span-6 space-y-24"
+              className=" "
               onMouseEnter={() => setActiveSide("left")}
               onMouseLeave={() => setActiveSide(null)}
             >
@@ -115,7 +115,7 @@ const ContactUs = () => {
                     <motion.div
                       key={i}
                       whileHover={{ y: -5 }}
-                      className="bg-white p-9 rounded-[3rem] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.03)] border border-white group transition-all"
+                      className="bg-white p-7 px-10 rounded-[3rem] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.03)] border border-white group transition-all"
                     >
                       <div className="flex justify-between items-start mb-6">
                         <div className="w-12 h-12 rounded-2xl bg-[#c09745] flex items-center justify-center text-white text-2xl">
@@ -123,7 +123,7 @@ const ContactUs = () => {
                         </div>
                         <HiOutlineArrowLongRight className="text-slate-300 group-hover:text-[#c09745] group-hover:translate-x-2 transition-all text-4xl" />
                       </div>
-                      <p className=" font-bold tracking-widest text-slate-500 mb-2">
+                      <p className=" font-bold text-slate-500 mb-2">
                         {item.label}
                       </p>
                       <h4 className="text-xl text-slate-900 leading-snug">
@@ -137,7 +137,7 @@ const ContactUs = () => {
 
             {/* RIGHT: THE FORM (BEYOND THE BOX) */}
             <div
-              className="lg:col-span-6"
+              className=""
               onMouseEnter={() => setActiveSide("right")}
               onMouseLeave={() => setActiveSide(null)}
             >
@@ -154,7 +154,7 @@ const ContactUs = () => {
                       />
                       <label
                         htmlFor="name"
-                        className="absolute left-0 -top-4 text-[10px] font-bold tracking-widest text-[#c09745] transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-slate-700 peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-[15px] peer-focus:text-[#c09745]"
+                        className="absolute left-0 -top-4 text-[10px] font-bold  text-[#c09745] transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-slate-700 peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-[15px] peer-focus:text-[#c09745]"
                       >
                         Your Full Name
                       </label>
@@ -169,7 +169,7 @@ const ContactUs = () => {
                       />
                       <label
                         htmlFor="email"
-                        className="absolute left-0 -top-4 text-[10px] font-bold tracking-widest text-[#c09745] transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-slate-700 peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-[15px] peer-focus:text-[#c09745]"
+                        className="absolute left-0 -top-4 text-[10px] font-bold  text-[#c09745] transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-slate-700 peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-[15px] peer-focus:text-[#c09745]"
                       >
                         Email Address
                       </label>
@@ -190,14 +190,14 @@ const ContactUs = () => {
 
                   <div className="relative group">
                     <textarea
-                      rows="4"
+                      rows="2"
                       className="peer w-full bg-transparent border-b border-slate-200 py-4 focus:outline-none focus:border-[#c09745] transition-all text-xl placeholder-transparent resize-none"
                       id="msg"
                       placeholder="Message"
                     ></textarea>
                     <label
                       htmlFor="msg"
-                      className="absolute left-0 -top-4 text-[10px] font-bold tracking-widest text-[#c09745] transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-slate-700 peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-[15px] peer-focus:text-[#c09745]"
+                      className="absolute left-0 -top-4 text-[10px] font-bold  text-[#c09745] transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-slate-700 peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-[15px] peer-focus:text-[#c09745]"
                     >
                       Brief Narrative
                     </label>
