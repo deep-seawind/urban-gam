@@ -86,9 +86,9 @@ const Blog = () => {
       <section className="bg-[#F8F9FA] py-16 lg:py-20">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="relative mb-24">
-            <h2 className="text-5xl lg:text-7xl font-light text-slate-900 leading-[0.8] tracking-tighter">
+            <h2 className="text-5xl lg:text-7xl font-light text-slate-900 ">
               Latest
-              <span className="font-serif italic text-[#c09745] ps-3">Insights</span>
+              <span className=" text-color ps-3 font-normal">Insights</span>
             </h2>
           </div>
 

@@ -54,9 +54,9 @@ const HomesLayouts = () => {
                   Collection
                 </span>
               </div>
-              <h2 className="text-5xl lg:text-7xl font-medium text-slate-950 leading-none">
+              <h2 className="text-5xl lg:text-7xl text-slate-950 font-light">
                 Homes &{" "}
-                <span className="italic text-[#c09745]">
+                <span className="text-color font-medium">
                   Layouts
                 </span>
               </h2>

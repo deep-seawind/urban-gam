@@ -54,7 +54,7 @@ const Header = () => {
           {/* Desktop CTA */}
           <Link
             to="/contactus"
-            className="hidden lg:inline-flex px-5 py-3 text-sm font-semibold rounded-full bg-[#4d633c] text-white hover:bg-[#3e5231] transition"
+            className="hidden lg:inline-flex px-5 py-3 text-sm font-semibold rounded-full bg-color text-white hover:bg-[#3e5231] transition"
           >
             Enquire Now
           </Link>
@@ -84,7 +84,7 @@ const Header = () => {
               className={({ isActive }) =>
                 `block text-lg font-semibold ${
                   isActive
-                    ? "text-[#4d633c]"
+                    ? "text-color"
                     : "text-slate-700 hover:text-[#4d633c]"
                 }`
               }
@@ -96,7 +96,7 @@ const Header = () => {
           <Link
             to="/contactus"
             onClick={() => setMenuOpen(false)}
-            className="inline-flex mt-10 px-6 py-4 text-sm font-semibold rounded-full bg-[#4d633c] text-white"
+            className="inline-flex mt-10 px-6 py-4 text-sm font-semibold rounded-full bg-color text-white"
           >
             Enquire Now
           </Link>

@@ -8,7 +8,7 @@ const AboutUs = () => {
     <>
       <Breadcrumb items={[{ label: "About Urban ગામ" }]} />
 
-      <section className="relative bg-[#F9F9F9] py-24 lg:py-30 overflow-hidden">
+      <section className="relative bg-[#F9F9F9] py-24 lg:py-20 overflow-hidden">
         {/* Editorial Watermark - Large, Elegant Serif */}
         <div className="absolute top-[-5%] left-1/6 text-[22vw] pt-18 text-center font-serif font-semibold text-slate-200/70 select-none pointer-events-none leading-none opacity-50">
           About
@@ -161,11 +161,11 @@ const AboutUs = () => {
           </div>
 
           {/* --- NEW SECTION: THE ARCHITECTURAL LEGACY (WORLD-CLASS UI) --- */}
-          <div className="mt-40 mb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="mt-28">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               
               {/* Left: Cinematic Stats */}
-              <div className="lg:col-span-5 order-2 lg:order-1">
+              <div className=" order-2 lg:order-1">
                 <div className="grid grid-cols-2 gap-8">
                   {[
                     { label: "Acres of Greenery", val: "40+", suffix: "ha" },
@@ -194,7 +194,7 @@ const AboutUs = () => {
               </div>
 
               {/* Right: Floating Aesthetic Composition */}
-              <div className="lg:col-span-7 order-1 lg:order-2">
+              <div className=" order-2 lg:order-1 ">
                 <div className="relative">
                   {/* Main Image */}
                   <div className="relative rounded-[4rem] overflow-hidden aspect-4/2 shadow-2xl z-10 group">

@@ -8,20 +8,46 @@ import {
   HiOutlineArrowLongRight,
 } from "react-icons/hi2";
 import Breadcrumb from "../../../Common/Breadcrumb/Breadcrumb";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPinterestP } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPinterestP,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import CityImage from "../../../assets/contact/city.jpg";
+import VillageImage from "../../../assets/contact/village.jpg";
+import SiteVisitModal from "./SiteVisitModal";
 
 const ContactUs = () => {
   const [activeSide, setActiveSide] = useState(null);
 
-
   const socialLinks = [
-    { icon: FaFacebookF, href: "https://www.facebook.com/urbangam.india", label: "Facebook" },
+    {
+      icon: FaFacebookF,
+      href: "https://www.facebook.com/urbangam.india",
+      label: "Facebook",
+    },
     { icon: FaXTwitter, href: "https://x.com/urbangamindia", label: "X" },
-    { icon: FaInstagram, href: "https://www.instagram.com/urbangam.india/", label: "Instagram" },
-    { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/urban-gam/", label: "LinkedIn" },
-    { icon: FaPinterestP, href: "https://in.pinterest.com/urbangamindia/", label: "Pinterest" },
+    {
+      icon: FaInstagram,
+      href: "https://www.instagram.com/urbangam.india/",
+      label: "Instagram",
+    },
+    {
+      icon: FaLinkedinIn,
+      href: "https://www.linkedin.com/company/urban-gam/",
+      label: "LinkedIn",
+    },
+    {
+      icon: FaPinterestP,
+      href: "https://in.pinterest.com/urbangamindia/",
+      label: "Pinterest",
+    },
   ];
+
+  const [openSiteVisit, setOpenSiteVisit] = useState(false);
+
 
   return (
     <>
@@ -34,35 +60,26 @@ const ContactUs = () => {
         <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2">
           {/* LEFT IMAGE */}
           <div
-            className={`relative bg-cover bg-center transition-all duration-700 ease-out
-            ${
-                activeSide === "left"
-                ? "grayscale-0 saturate-110 contrast-110"
-                : "grayscale opacity-90"
-            }
+            className={`relative bg-cover bg-center opacity-20
+           
             `}
             style={{
-              backgroundImage: `url(https://i.pinimg.com/1200x/c3/8c/0b/c38c0bd982a2fb1c07e77e84bf340d95.jpg)`,
+              backgroundImage: `url(${CityImage})`,
             }}
           >
-            {" "}
-            <div className="absolute inset-0 bg-black/50  " />
+            <div className="absolute inset-0 bg-linear-to-t from-yellow-600/90 via-amber-500/40 to-transparent" />
           </div>
 
           {/* RIGHT IMAGE */}
           <div
-            className={`relative bg-cover bg-center transition-all duration-700 ease-out
-                ${
-                    activeSide === "right"
-                    ? "grayscale-0 saturate-110 contrast-110"
-                    : "grayscale opacity-90"
-                }
+            className={`relative bg-cover bg-center opacity-20
+              
                 `}
             style={{
-              backgroundImage: `url(https://i.pinimg.com/1200x/60/28/f6/6028f676bc21e38b5e30984cc5f557c1.jpg)`,
+              backgroundImage: `url(${VillageImage})`,
             }}
           >
-            <div className="absolute inset-0 bg-black/50  " />
+            <div className="absolute inset-0 bg-linear-to-t from-green-900/90 via-green-900/50 to-transparent" />
           </div>
         </div>
 
@@ -73,13 +90,13 @@ const ContactUs = () => {
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="text-5xl md:text-7xl text-white"
+                className="text-5xl md:text-7xl text-black font-light"
               >
-                Let's Talkreality
+                Let's <span className="text-color">Talkreality</span> 
               </motion.h1>
             </div>
-            <div className="  pb-4 lg:pl-10">
-              <p className="text-white text-lg leading-relaxed border-l border-[#c09745] pl-4">
+            <div className="pb-4 lg:pl-10">
+              <p className="text-black text-lg leading-relaxed border-l-4 border-[#c09745] pl-4">
                 We don't just build structures; we curate legacies. Reach out to
                 discuss your next landmark project.
               </p>
@@ -96,7 +113,7 @@ const ContactUs = () => {
             >
               {/* LEFT: THE CONCIERGE CARDS */}
               <div className="lg:col-span-5 space-y-8">
-                <div className="sticky top-12 space-y-6">
+                <div className="sticky top-12  grid grid-cols-1 lg:grid-cols-2 gap-5">
                   {[
                     {
                       label: "Digital Enquiries",
@@ -113,11 +130,18 @@ const ContactUs = () => {
                       val: "Heritage Drive, Surat, IN",
                       icon: <HiOutlineMapPin />,
                     },
+                    {
+                      label: "Schedule Site Visit",
+                      val: "Book an Appointment",
+                      icon: <HiOutlineMapPin />,
+                      action: () => setOpenSiteVisit(true),
+                    },
                   ].map((item, i) => (
                     <motion.div
                       key={i}
+                      onClick={item.action}
                       whileHover={{ y: -5 }}
-                      className="bg-white p-7 px-10 rounded-[3rem] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.03)] border border-white group transition-all"
+                      className="cursor-pointer bg-white p-6 px-10 rounded-[3rem] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.03)] border border-white group transition-all"
                     >
                       <div className="flex justify-between items-start mb-6">
                         <div className="w-12 h-12 rounded-2xl bg-[#c09745] flex items-center justify-center text-white text-2xl">
@@ -128,11 +152,30 @@ const ContactUs = () => {
                       <p className=" font-bold text-slate-500 mb-2">
                         {item.label}
                       </p>
-                      <h4 className="text-xl text-slate-900 leading-snug">
+                      <h4 className="text-xl text-slate-900 leading-snug mb-0">
                         {item.val}
                       </h4>
                     </motion.div>
                   ))}
+                </div>
+
+                {/* --- SECTION 3: THE INTERACTIVE FOOTER --- */}
+                <div className=" bg-white p-10  rounded-[3rem]  gap-10">
+                  <h4 className="text-slate-900 font-bold mb-2 text-xl text-center">
+                    Follow Us
+                  </h4>
+                  <div className="flex items-center justify-center gap-4">
+                    {socialLinks.map((social) => (
+                      <a
+                        key={social.label}
+                        href={social.href}
+                        target="_blank"
+                        className="w-12 h-12 rounded-2xl bg-[#c09745] flex items-center justify-center text-white hover:bg-white hover:text-[#c09745] hover:border-[#c09745] hover:-translate-y-2 transition-all duration-500"
+                      >
+                        <social.icon className="w-5 h-5" />
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -143,14 +186,14 @@ const ContactUs = () => {
               onMouseEnter={() => setActiveSide("right")}
               onMouseLeave={() => setActiveSide(null)}
             >
-              <div className="bg-white rounded-[4rem] p-10 lg:p-19 shadow-[0_60px_100px_-40px_rgba(0,0,0,0.08)]">
+              <div className="bg-white rounded-[4rem] p-10 lg:p-18 shadow-[0_60px_100px_-40px_rgba(0,0,0,0.08)]">
                 <form className="space-y-16">
                   {/* Floating Input Group */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
                     <div className="relative group">
                       <input
                         type="text"
-                        className="peer w-full bg-transparent border-b border-slate-200 py-4 focus:outline-none focus:border-[#c09745] transition-all text-xl placeholder-transparent"
+                        className="peer w-full bg-transparent border-b border-slate-200 py-4 focus:outline-none focus:border-[#c09745] transition-all  placeholder-transparent"
                         id="name"
                         placeholder="Name"
                       />
@@ -165,7 +208,7 @@ const ContactUs = () => {
                     <div className="relative group">
                       <input
                         type="email"
-                        className="peer w-full bg-transparent border-b border-slate-200 py-4 focus:outline-none focus:border-[#c09745] transition-all text-xl   placeholder-transparent"
+                        className="peer w-full bg-transparent border-b border-slate-200 py-4 focus:outline-none focus:border-[#c09745] transition-all    placeholder-transparent"
                         id="email"
                         placeholder="Email"
                       />
@@ -179,12 +222,14 @@ const ContactUs = () => {
                   </div>
 
                   <div className="relative group">
-                    <select className="peer w-full bg-transparent border-b border-slate-200 py-4 focus:outline-none focus:border-[#c09745] transition-all   appearance-none cursor-pointer">
-                      <option>Select Project Nature</option>
-                      <option>Private Residence</option>
-                      <option>Commercial Development</option>
-                      <option>Investment Inquiry</option>
+                    <select className="peer w-full bg-transparent border-b border-slate-200 py-4 focus:outline-none focus:border-[#c09745] transition-all appearance-none cursor-pointer">
+                      <option value="">Select Project Nature</option>
+                      <option value="buyer">Buyer</option>
+                      <option value="investor">Investor</option>
+                      <option value="event">Event</option>
+                      <option value="stay">Stay</option>
                     </select>
+
                     <div className="absolute right-0 bottom-4 pointer-events-none text-slate-400">
                       <HiOutlineArrowUpRight />
                     </div>
@@ -193,7 +238,7 @@ const ContactUs = () => {
                   <div className="relative group">
                     <textarea
                       rows="2"
-                      className="peer w-full bg-transparent border-b border-slate-200 py-4 focus:outline-none focus:border-[#c09745] transition-all text-xl placeholder-transparent resize-none"
+                      className="peer w-full bg-transparent border-b border-slate-200 py-4 focus:outline-none focus:border-[#c09745] transition-all  placeholder-transparent resize-none"
                       id="msg"
                       placeholder="Message"
                     ></textarea>
@@ -220,24 +265,11 @@ const ContactUs = () => {
             </div>
           </div>
 
-          {/* --- SECTION 3: THE INTERACTIVE FOOTER --- */}
-          <div className="mt-20 border-t border-slate-200 pt-16 flex flex-col md:flex-row justify-between items-center gap-10">
-            <div className="flex items-center gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-color hover:bg-white hover:text-[#5e6c36] hover:border-[#5e6c36] hover:-translate-y-2 transition-all duration-500"
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-            <p className="font-serif italic text-2xl text-slate-100">
-              Inspired by Heritage, Built for Forever.
-            </p>
-          </div>
+       <SiteVisitModal
+  isOpen={openSiteVisit}
+  onClose={() => setOpenSiteVisit(false)}
+/>
+
         </div>
       </section>
     </>

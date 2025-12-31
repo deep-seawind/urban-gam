@@ -121,13 +121,13 @@ const Footer = () => {
       {/* Background Image Layer with White Opacity */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 -bottom-8 bg-contain bg-no-repeat bg-center opacity-40"
+          className="absolute inset-0 -bottom-8 bg-cover bg-no-repeat bg-center opacity-70"
           style={{ backgroundImage: `url(${BackgroundImage})` }}
         />
         <div className="absolute inset-0 bg-white/50 " />
       </div>
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+      <div className="container mx-auto px-6 lg:px-12 relative z-0">
         <div className="grid grid-cols-1 lg:grid-cols-9 gap-16 lg:gap-8 mb-10">
           <div className="lg:col-span-2 space-y-8">
             <div className="inline-block relative">
@@ -175,7 +175,7 @@ const Footer = () => {
                   key={social.label}
                   to={social.href}
                   target="_blank"
-                  className="w-12 h-12 rounded-2xl bg-[#5e6c36] border border-slate-100 flex items-center justify-center text-white hover:bg-white hover:text-[#5e6c36] hover:border-[#5e6c36] hover:-translate-y-2 transition-all duration-500"
+                  className="w-12 h-12 rounded-2xl bg-color border border-slate-100 flex items-center justify-center text-white hover:bg-white hover:text-[#5e6c36] hover:border-[#5e6c36] hover:-translate-y-2 transition-all duration-500"
                 >
                   <social.icon className="w-20 h-5" />
                 </Link>
@@ -239,7 +239,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-[#5e6c36] py-3 relative z-10">
+      <div className="bg-[#5e6c36] py-3 relative  ">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <p className="text-white/80 text-sm font-medium">

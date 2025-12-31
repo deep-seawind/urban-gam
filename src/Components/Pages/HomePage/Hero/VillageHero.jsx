@@ -53,7 +53,7 @@ const VillageHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
             </span>
           </h2>
 
-          <p className="text-white/90 text-lg mb-8">
+          <p className="text-white/90 text-lg mb-8 text-left">
             Embrace the tranquility of nature. <br />
             Where peace finds its home.
           </p>

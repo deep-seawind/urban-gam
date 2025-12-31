@@ -9,10 +9,14 @@
  }
 
  .text-color{
-    color: #4d633c;
+    background: linear-gradient(to bottom, #b4a14c 0%, #4d633c 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold; /* Looks better with bold text */
  }
  
  .bg-color{
-    background: #4d633c;
+   background: linear-gradient(135deg, #b4a14c 0%, #4d633c 50%); 
     color: white;
  }

@@ -10,6 +10,7 @@ import Gallery from "../Components/Pages/Gallery/Gallery";
 import Blog from "../Components/Pages/Blog/Blog";
 import BlogDetails from "../Components/Pages/Blog/BlogDetails";
 import ContactUs from "../Components/Pages/ContactUs/ContactUs";
+import ContactActionButtons from "../Common/ContactActionButtons/ContactActionButtons";
 
 const MainRouter = () => {
   const location = useLocation();
@@ -19,6 +20,7 @@ const MainRouter = () => {
       {!hideHeader && <Header />}
 
       <ScrollToTop />
+       <ContactActionButtons />
       <Routes>
         <Route path="/" element={<Home />} />
 

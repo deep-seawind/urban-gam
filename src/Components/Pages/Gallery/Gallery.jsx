@@ -98,9 +98,9 @@ const Gallery = () => {
           {/* --- HEADER --- */}
           <div className="flex flex-col lg:flex-row justify-between items-end gap-12 mb-24">
             <div className="relative">
-              <h2 className="text-5xl lg:text-7xl font-light text-slate-900 leading-[0.8] tracking-tighter">
+              <h2 className="text-5xl lg:text-7xl font-light text-slate-900">
                 Gallery 
-                <span className="font-serif italic text-[#c09745] ps-3">
+                <span className="text-color ps-3 font-medium w-full">
                   Studio
                 </span>
               </h2>
