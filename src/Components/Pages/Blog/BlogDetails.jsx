@@ -17,7 +17,7 @@ const BlogDetails = () => {
     category: "Architecture",
     date: "Dec 20, 2025",
     readTime: "8 min read",
-    title: "The Soul of Urban ગામ: Why We Chose Earthy Materials",
+    title: "The Soul of URBAN ગામ: Why We Chose Earthy Materials",
     subtitle:
       "A deep dive into the philosophy of breathable walls, hand-hewn stone, and the return to ancestral construction wisdom.",
     author: {
@@ -119,7 +119,7 @@ const BlogDetails = () => {
               <div className="prose prose-xl max-w-none text-slate-700 font-normal leading-relaxed space-y-12">
                 <p className="text-2xl text-slate-900 font-normal italic first-letter:text-7xl first-letter:font-serif first-letter:mr-3 first-letter:float-left first-letter:text-[#c09745]">
                   Architecture is not just about the space we inhabit, but the
-                  feelings that space evokes. At Urban ગામ, we looked backward
+                  feelings that space evokes. At URBAN ગામ, we looked backward
                   to look forward, identifying materials that have survived
                   centuries of weather and cultural shifts.
                 </p>
@@ -169,7 +169,7 @@ const BlogDetails = () => {
         {
           id: 2,
           category: "Lifestyle",
-          title: "Designing for the Golden Hour at Urban ગામ",
+          title: "Designing for the Golden Hour at URBAN ગામ",
           image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop"
         },
         {
@@ -218,7 +218,7 @@ const BlogDetails = () => {
         Want to see it for yourself?
       </h4>
       <p className="text-white/80 text-xs mb-8 font-light leading-relaxed">
-        Experience the textures and light of Urban ગામ firsthand.
+        Experience the textures and light of URBAN ગામ firsthand.
       </p>
       <button className="w-full bg-white text-slate-950 py-4 rounded-full font-black text-[10px] uppercase tracking-[0.2em] hover:bg-slate-950 hover:text-white transition-all duration-500 shadow-xl">
         Book a Site Visit

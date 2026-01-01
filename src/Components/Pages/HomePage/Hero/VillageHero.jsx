@@ -15,7 +15,7 @@ const VillageHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
     >
       {/* Background */}
       <div
-        className={`absolute inset-0 bg-cover bg-center transition-all duration-[1.2s] ease-out
+        className={`absolute inset-0 bg-cover bg-center transition-all duration-[1.5s] ease-out
           filter grayscale brightness-90
           ${
             hoveredSide === "village"
@@ -53,7 +53,7 @@ const VillageHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
             </span>
           </h2>
 
-          <p className="text-white/90 text-lg mb-8 text-left">
+          <p className="text-white/90 text-lg mb-8">
             Embrace the tranquility of nature. <br />
             Where peace finds its home.
           </p>

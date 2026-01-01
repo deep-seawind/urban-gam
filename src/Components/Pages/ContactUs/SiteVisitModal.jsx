@@ -1,6 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
-import SiteVisitForm from "./SiteVisitForm";
+import { motion } from "framer-motion"; 
 import {
   IoPersonOutline,
   IoCallOutline,
@@ -31,7 +30,7 @@ const SiteVisitModal = ({ isOpen, onClose }) => {
         exit={{ scale: 0.9, y: 30 }}
         transition={{ type: "spring", stiffness: 200 }}
         onClick={(e) => e.stopPropagation()}
-        className="    w-1/4  max-w-2xl shadow-2xl"
+        className="w-1/4  max-w-2xl shadow-2xl"
       >
         <div className="max-w-2xl mx-auto p-10 bg-white rounded-[2.5rem] shadow-[0_22px_70px_4px_rgba(0,0,0,0.08)] border border-gray-50">
           <div className="flex justify-between items-center mb-8">

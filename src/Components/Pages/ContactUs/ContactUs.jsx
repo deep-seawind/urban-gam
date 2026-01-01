@@ -6,6 +6,7 @@ import {
   HiOutlineMapPin,
   HiOutlineArrowUpRight,
   HiOutlineArrowLongRight,
+  HiOutlineCalendarDays,
 } from "react-icons/hi2";
 import Breadcrumb from "../../../Common/Breadcrumb/Breadcrumb";
 import {
@@ -25,23 +26,23 @@ const ContactUs = () => {
   const socialLinks = [
     {
       icon: FaFacebookF,
-      href: "https://www.facebook.com/urbangam.india",
+      href: "https://www.facebook.com/URBANgam.india",
       label: "Facebook",
     },
-    { icon: FaXTwitter, href: "https://x.com/urbangamindia", label: "X" },
+    { icon: FaXTwitter, href: "https://x.com/URBANgamindia", label: "X" },
     {
       icon: FaInstagram,
-      href: "https://www.instagram.com/urbangam.india/",
+      href: "https://www.instagram.com/URBANgam.india/",
       label: "Instagram",
     },
     {
       icon: FaLinkedinIn,
-      href: "https://www.linkedin.com/company/urban-gam/",
+      href: "https://www.linkedin.com/company/URBAN-gam/",
       label: "LinkedIn",
     },
     {
       icon: FaPinterestP,
-      href: "https://in.pinterest.com/urbangamindia/",
+      href: "https://in.pinterest.com/URBANgamindia/",
       label: "Pinterest",
     },
   ];
@@ -117,7 +118,7 @@ const ContactUs = () => {
                   {[
                     {
                       label: "Digital Enquiries",
-                      val: "studio@urbangam.com",
+                      val: "info@URBANgam.com",
                       icon: <HiOutlineEnvelope />,
                     },
                     {
@@ -133,7 +134,7 @@ const ContactUs = () => {
                     {
                       label: "Schedule Site Visit",
                       val: "Book an Appointment",
-                      icon: <HiOutlineMapPin />,
+                      icon: <HiOutlineCalendarDays />,
                       action: () => setOpenSiteVisit(true),
                     },
                   ].map((item, i) => (

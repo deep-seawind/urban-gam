@@ -14,7 +14,7 @@ const Blog = () => {
       category: "Architecture",
       date: "Dec 20, 2025",
       readTime: "5 min",
-      title: "The Soul of Urban ગામ: Earthy Materials",
+      title: "The Soul of URBAN ગામ: Earthy Materials",
       excerpt:
         "Exploring the philosophy behind our construction—from hand-hewn stone to lime plaster.",
       // Fixed Image URL
@@ -51,7 +51,7 @@ const Blog = () => {
       readTime: "4 min",
       title: "Crafting the Modern Village",
       excerpt:
-        "How Urban ગામ redefines communal spaces for the next generation of living.",
+        "How URBAN ગામ redefines communal spaces for the next generation of living.",
       image:
         "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1000&auto=format&fit=crop",
     },
@@ -60,7 +60,7 @@ const Blog = () => {
       category: "Nature",
       date: "Nov 15, 2025",
       readTime: "6 min",
-      title: "Reforesting the Urban Edge",
+      title: "Reforesting the URBAN Edge",
       excerpt:
         "Our commitment to indigenous plantation and creating a micro-climate of peace.",
       image:
@@ -137,11 +137,11 @@ const Blog = () => {
                     </span>
                   </div>
 
-                  <h4 className="text-2xl font-bold text-slate-900 leading-tight mb-4 group-hover:text-[#c09745] transition-colors duration-300">
+                  <h4 className="text-2xl font-semibold text-slate-900 leading-tight mb-4 group-hover:text-[#c09745] transition-colors duration-300">
                     {post.title}
                   </h4>
 
-                  <p className="text-slate-500 leading-relaxed line-clamp-2 text-sm font-light">
+                  <p className="text-slate-500 leading-relaxed line-clamp-2 text-sm">
                     {post.excerpt}
                   </p>
 

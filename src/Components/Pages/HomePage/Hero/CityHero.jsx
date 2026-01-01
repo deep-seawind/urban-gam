@@ -15,7 +15,7 @@ const CityHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
     >
       {/* Background */}
       <div
-        className={`absolute inset-0 bg-cover bg-center transition-all duration-[1.2s] ease-out
+        className={`absolute inset-0 bg-cover bg-center transition-all duration-[2s] ease-out
           filter grayscale brightness-90
           ${
             hoveredSide === "city"
@@ -27,7 +27,7 @@ const CityHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
 
       <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
 
-      <div className="relative z-10 h-full flex flex-col justify-end p-8 lg:p-20">
+      <div className="relative z-10 h-full flex flex-col justify-end p-8 lg:p-20 pb-20">
         <div className="max-w-lg">
           <div
             className={`flex items-center gap-2 mb-4 transition-all duration-500 ${
@@ -38,7 +38,7 @@ const CityHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
           >
             <FaCity className="text-white w-5 h-5" />
             <span className="text-white text-xs font-semibold tracking-[0.2em] uppercase">
-              Urban Living
+              URBAN Living
             </span>
           </div>
 
