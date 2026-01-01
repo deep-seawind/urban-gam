@@ -28,7 +28,7 @@ const Investment = () => {
   return (
 
     <>
-    <Breadcrumb items={[{ label: "Managed Living & Rentals" }]} />
+    <Breadcrumb items={[{ label: "Investment Opportunities" }]} />
 
      <section className="py-16 bg-[#FCFCFA] text-slate-900 overflow-hidden font-sans">
       <div className="container mx-auto px-6">
@@ -132,9 +132,9 @@ const Investment = () => {
                  </li>
               </ul>
 
-              <button className="px-10 py-5 bg-slate-900 text-white rounded-2xl font-bold flex items-center gap-3 hover:bg-[#4d633c] transition-all group">
+              {/* <button className="px-10 py-5 bg-slate-900 text-white rounded-2xl font-bold flex items-center gap-3 hover:bg-[#4d633c] transition-all group">
                 Download Investment Prospectus <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
-              </button>
+              </button> */}
            </div>
         </div>
 

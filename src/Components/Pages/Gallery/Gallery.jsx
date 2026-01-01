@@ -217,7 +217,7 @@ const Gallery = () => {
                         <span className="text-[#c09745] font-semibold text-[10px] tracking-[0.5em] uppercase mb-2 block">
                           {filteredItems[selectedIndex].category}
                         </span>
-                        <h3 className="text-3xl lg:text-5xl text-white font-serif italic tracking-tight">
+                        <h3 className="text-3xl lg:text-5xl text-white tracking-tight">
                           {filteredItems[selectedIndex].title}
                         </h3>
                       </div>

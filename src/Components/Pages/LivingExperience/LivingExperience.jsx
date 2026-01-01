@@ -68,7 +68,7 @@ const LivingExperience = () => {
                     key={idx}
                     className="group gap-6 p-6 rounded-2xl transition-all duration-500 hover:bg-white hover:shadow-xl hover:shadow-[#4d633c]/5  hover:border-slate-400 border border-zinc-200"
                   >
-                    <div className="mt-1 p-3 table rounded-xl bg-slate-50 text-[#4d633c] group-hover:bg-[#4d633c] group-hover:text-white transition-colors duration-300">
+                    <div className="mt-1 p-3 table rounded-xl group-hover:bg-slate-50 group-hover:text-[#4d633c] bg-[#4d633c] text-white transition-colors duration-300">
                       {item.icon}
                     </div>
                     <div>
@@ -129,8 +129,8 @@ const LivingExperience = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-0 border border-white/10 rounded-[3rem] overflow-hidden">
           {values.map((v, i) => (
-            <div key={i} className="p-16 border-r border-white/10 last:border-0 hover:bg-white/5 transition-colors group">
-              <div className="text-[#b4a14c] text-5xl mb-8 group-hover:scale-110 transition-transform">
+            <div key={i} className="p-16 border-r border-white/10 last:border-0 hover:bg-white/5 transition-colors group bg-white/20">
+              <div className="text-[#b4a14c] text-5xl mb-8 group-hover:scale-110 transition-transform bg-white table p-2 rounded-full">
                 {v.icon}
               </div>
               <h3 className="text-white text-2xl font-bold mb-4">{v.title}</h3>
@@ -176,7 +176,7 @@ const LivingExperience = () => {
           {/* Interior Focus */}
           <div className="col-span-1 relative overflow-hidden group rounded-3xl min-h-75">
             <img 
-              src="https://i.pinimg.com/736x/37/93/15/3793158d921807c55efe0ca628b8b64a.jpg" 
+              src="https://i.pinimg.com/736x/b4/ad/e6/b4ade6014f68178b4da5fc3f93c3fcea.jpg" 
               className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" 
               alt="Luxury Interior" 
             />

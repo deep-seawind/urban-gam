@@ -4,12 +4,9 @@ import { HiOutlinePhone } from "react-icons/hi2";
 
 const ContactActionButtons = () => {
   return (
-    <div className="fixed bottom-8 right-6 z-50 flex flex-col gap-5">
-      {/* WhatsApp - Floating Pulse Orb */}
-      <div className="fixed bottom-8 right-6 z-50 flex flex-col gap-4">
-        {/* WhatsApp - Floating Pulse Orb */}
-        <div className="relative group">
-          {/* Radiating Ring Animation */}
+    <div className="fixed bottom-8 right-6 z-50 flex flex-col gap-5"> 
+      <div className="fixed bottom-8 right-6 z-50 flex flex-col gap-4"> 
+        <div className="relative group"> 
           <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping group-hover:animate-none"></span>
 
           <a
@@ -45,12 +42,11 @@ const ContactActionButtons = () => {
             aria-label="Call Now"
             className="relative flex items-center justify-center 
                  w-12 h-12 sm:w-14 sm:h-14 
-                 rounded-full 
-                 bg-slate-900 
+                 rounded-full   
                  text-white 
                  shadow-[0_8px_18px_rgba(0,0,0,0.25)] 
                  transition-all duration-500 
-                 hover:scale-110 hover:bg-[#c09745] active:scale-90"
+                 hover:scale-110  bg-[#c09745] active:scale-90"
           >
             <HiOutlinePhone className="text-xl sm:text-2xl" />
 
