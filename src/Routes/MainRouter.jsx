@@ -18,6 +18,7 @@ import Wellness from "../Components/Pages/Wellness/Wellness";
 import Location from "../Components/Pages/Location/Location";
 import Investment from "../Components/Pages/Investment/Investment";
 import LayoutDetails from "../Components/Pages/HomesLayouts/LayoutDetails";
+import GoogleTranslate from "../language/GoogleTranslate";
 
 const MainRouter = () => {
   const location = useLocation();
@@ -27,6 +28,7 @@ const MainRouter = () => {
       {!hideHeader && <Header />}
 
       <ScrollToTop />
+       <GoogleTranslate/>
        <ContactActionButtons />
       <Routes>
         <Route path="/" element={<Home />} />

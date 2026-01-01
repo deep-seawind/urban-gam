@@ -2,9 +2,11 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
 import Logo from "../../assets/logo/logo.jpg";
+import LanguageSelector from "../../language/LanguageSelector";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
 
   const navMenu = [
     { name: "Home", path: "/" },
@@ -50,6 +52,8 @@ const Header = () => {
               </NavLink>
             ))}
           </nav>
+
+           <LanguageSelector />
 
           {/* Desktop CTA */}
           <Link
