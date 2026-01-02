@@ -49,7 +49,6 @@ const ContactUs = () => {
 
   const [openSiteVisit, setOpenSiteVisit] = useState(false);
 
-
   return (
     <>
       <Breadcrumb items={[{ label: "Contact Us" }]} />
@@ -93,7 +92,7 @@ const ContactUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 className="text-5xl md:text-7xl text-black font-light"
               >
-                Let's <span className="text-color">Talkreality</span> 
+                Let's <span className="text-color">Talkreality</span>
               </motion.h1>
             </div>
             <div className="pb-4 lg:pl-10">
@@ -266,11 +265,10 @@ const ContactUs = () => {
             </div>
           </div>
 
-       <SiteVisitModal
-  isOpen={openSiteVisit}
-  onClose={() => setOpenSiteVisit(false)}
-/>
-
+          <SiteVisitModal
+            isOpen={openSiteVisit}
+            onClose={() => setOpenSiteVisit(false)}
+          />
         </div>
       </section>
     </>

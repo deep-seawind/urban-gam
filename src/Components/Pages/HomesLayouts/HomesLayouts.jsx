@@ -51,14 +51,14 @@ const HomesLayouts = () => {
   ];
 
   return (
-    <div className="bg-[#FCFCFA] min-h-screen font-sans text-slate-900">
+    <div className="bg-[#FCFCFA] min-h-screen text-slate-900">
       <Breadcrumb items={[{ label: "Architectural Layouts" }]} />
 
       {/* --- SECTION 1: EDITORIAL HEADER --- */}
       <section className="pt-24 pb-12 px-6 lg:px-12 container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           <div className="col-span-3">
-            <span className="text-[#b4a14c] font-bold tracking-[0.5em] text-[10px] uppercase mb-6 block">
+            <span className="text-[#b4a14c] font-bold tracking-[0.5em] text-[15px] mb-6 block">
               Structured Excellence
             </span>
             <h1 className="text-5xl lg:text-7xl font-light">
@@ -70,8 +70,7 @@ const HomesLayouts = () => {
             <p className="text-lg text-slate-500  leading-relaxed">
               We offer three distinct scales of living. Each layout is a result
               of
-              <span className="text-slate-900 font-medium">
-                {" "}
+              <span className="text-slate-900 font-medium"> 
                 disciplined architecture
               </span>
               —designed to protect the brand's aesthetic integrity while
@@ -119,7 +118,7 @@ const HomesLayouts = () => {
 
                    <Link
                     to={"/layouts-details"}>
-                  <h3 className="text-4xl  text-slate-900 leading-tight group-hover:text-[#4d633c] transition-colors">
+                  <h3 className="text-5xl text-slate-900 leading-tight group-hover:text-[#4d633c] transition-colors">
                     {home.title}
                   </h3>
                   </Link>
@@ -128,7 +127,7 @@ const HomesLayouts = () => {
                 {/* Persona Card */}
                 <div className="bg-white border border-slate-100 p-6 rounded-4xl shadow-sm mb-6 relative overflow-hidden group-hover:shadow-md transition-shadow">
                   <div className="absolute top-0 left-0 w-1 h-full bg-[#4d633c]/20" />
-                  <p className="text-[#4d633c]   text-base mb-4 leading-snug">
+                  <p className="text-[#4d633c] text-lg mb-4 leading-snug">
                     "The {home.profile}"
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -143,7 +142,7 @@ const HomesLayouts = () => {
                   </div>
                 </div>
 
-                <p className="text-slate-500 text-sm leading-relaxed  mb-8 line-clamp-3">
+                <p className="text-slate-500 leading-relaxed  mb-8 line-clamp-3">
                   Thoughtfully engineered to maximize built-up efficiency while
                   framing uninterrupted green vistas through strategic window
                   placement.
@@ -171,7 +170,7 @@ const HomesLayouts = () => {
             <h2 className="text-5xl font-light mb-6">
               The Blueprint <span className="text-color">Logic.</span>
             </h2>
-            <p className="text-slate-500 mx-auto">
+            <p className="text-slate-500 text-lg mx-auto">
               To maintain "URBAN ગામ" as a premium brand, we follow a strict
               design code that balances individual ownership with collective
               beauty.
@@ -208,8 +207,8 @@ const HomesLayouts = () => {
                 <div className="w-14 h-14 rounded-2xl group-hover:bg-white shadow-sm flex items-center justify-center text-2xl group-hover:text-[#4d633c] mb-8 bg-[#4d633c] text-white transition-all duration-500">
                   {box.icon}
                 </div>
-                <h4 className="text-xl font-bold mb-4">{box.title}</h4>
-                <p className="text-sm text-slate-400 leading-relaxed">
+                <h4 className="text-2xl font-bold mb-4">{box.title}</h4>
+                <p className="text-slate-500 leading-relaxed">
                   {box.desc}
                 </p>
               </div>

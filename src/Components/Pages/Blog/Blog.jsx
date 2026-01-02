@@ -141,12 +141,12 @@ const Blog = () => {
                     {post.title}
                   </h4>
 
-                  <p className="text-slate-500 leading-relaxed line-clamp-2 text-sm">
+                  <p className="text-slate-500 leading-relaxed line-clamp-2 text-lg">
                     {post.excerpt}
                   </p>
 
                   {/* Interactive Link Label */}
-                  <div className="mt-6 flex items-center gap-2 text-[#c09745] text-sm font-bold tracking-widest opacity-0 group-hover:opacity-100 transform -translate-x-2.5 group-hover:translate-x-0 transition-all duration-500 uppercase">
+                  <div className="mt-6 flex items-center gap-2 text-[#c09745] text-lg font-bold tracking-widest opacity-0 group-hover:opacity-100 transform -translate-x-2.5 group-hover:translate-x-0 transition-all duration-500 uppercase">
                     Read Article <HiOutlineArrowLongRight />
                   </div>
                 </div>

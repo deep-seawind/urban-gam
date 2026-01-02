@@ -12,7 +12,7 @@ const Breadcrumb = ({ items = [] }) => {
         className="relative container mx-auto px-6 lg:px-12 py-6"
       >
         <div className="flex justify-center">
-          <ol className="flex items-center flex-wrap gap-2 text-sm backdrop-blur-md bg-white/70 border border-slate-200/60 rounded-full px-6 py-3 shadow-lg w-fit">
+          <ol className="flex items-center flex-wrap gap-2 text-lg backdrop-blur-md bg-white/70 border border-slate-200/60 rounded-full px-6 py-3 shadow-lg w-fit">
             {/* Home */}
             <li className="flex items-center gap-2">
               <Link

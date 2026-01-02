@@ -116,7 +116,7 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="relative bg-zinc-100 pt-8 border-t border-slate-100 overflow-hidden"
+      className="relative bg-zinc-100 pt-16 border-t border-slate-100 overflow-hidden"
     >
       {/* Background Image Layer with White Opacity */}
       <div className="absolute inset-0 z-0">
@@ -124,7 +124,7 @@ const Footer = () => {
           className="absolute inset-0 -bottom-8 bg-cover bg-no-repeat bg-center opacity-70"
           style={{ backgroundImage: `url(${BackgroundImage})` }}
         />
-        <div className="absolute inset-0 bg-white/50 " />
+        <div className="absolute inset-0 bg-white/60 " />
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-0">
@@ -155,7 +155,7 @@ const Footer = () => {
                     <li key={link.name}>
                       <Link
                         to={link.href}
-                        className="group flex items-center text-slate-700 hover:text-[#5e6c36] text-sm transition-colors duration-300"
+                        className="group flex items-center text-slate-700 hover:text-[#5e6c36] text-lg transition-colors duration-300"
                       >
                         <span className="w-0 group-hover:w-4 h-px bg-[#5e6c36] transition-all duration-300 mr-0 group-hover:mr-2" />
                         <span className=" font-medium">{link.name}</span>
@@ -194,8 +194,8 @@ const Footer = () => {
           </button>
         </div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-          <div className="p-8 rounded-4xl bg-[#fffdf4]/30 border hover:border-slate-300 border-[#5e6c36] transition-colors duration-500 group space-x-10 flex items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14 mt-16">
+          <div className="p-8 rounded-4xl text-lg bg-[#fffdf4]/30 border hover:border-[#c09745] border-[#5e6c36] transition-colors duration-500 group space-x-10 flex items-center">
             <div className="w-12 h-12 rounded-xl group-hover:bg-[#c09745] shadow-sm flex items-center justify-center bg-[#5e6c36] transition-colors duration-500">
               <FiMail className="w-5 h-5 text-white" />
             </div>
@@ -204,7 +204,7 @@ const Footer = () => {
               <p className=" font-bold text-slate-700 mb-1">Email us</p>
               <a
                 href="mailto:info@urbangam.com"
-                className="text-slate-900 hover:text-[#5e6c36]"
+                className="text-slate-900 hover:text-[#5e6c36] "
                 target="_blank"
               >
                 info@urbangam.com
@@ -212,7 +212,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="p-8 rounded-4xl bg-[#fffdf4]/30 border hover:border-slate-300 border-[#5e6c36] transition-colors duration-500 group space-x-10 flex items-center">
+          <div className="p-8 rounded-4xl text-lg bg-[#fffdf4]/30 border hover:border-[#c09745] border-[#5e6c36] transition-colors duration-500 group space-x-10 flex items-center">
             <div className="w-12 h-12 rounded-xl group-hover:bg-[#c09745] shadow-sm flex items-center justify-center bg-[#5e6c36] transition-colors duration-500">
               <FiPhone className="w-5 h-5   text-white" />
             </div>
@@ -220,20 +220,20 @@ const Footer = () => {
               <p className="font-bold text-slate-700 mb-1">Call us</p>
               <a
                 href="tel:+919876543210"
-                className="text-slate-900 hover:text-[#5e6c36] transition-colors font-medium"
+                className="text-slate-900 hover:text-[#5e6c36]  transition-colors font-medium"
               >
                 +91 98765 43210
               </a>
             </div>
           </div>
 
-          <div className="p-8 rounded-4xl bg-[#fffdf4]/30 border hover:border-slate-300 border-[#5e6c36] transition-colors duration-500 group space-x-10 flex items-center">
+          <div className="p-8 rounded-4xl text-lg bg-[#fffdf4]/40 border hover:border-[#c09745] border-[#5e6c36] transition-colors duration-500 group space-x-10 flex items-center">
             <div className="w-12 h-12 rounded-xl group-hover:bg-[#c09745] shadow-sm flex items-center justify-center bg-[#5e6c36] transition-colors duration-500">
               <FiMapPin className="w-5 h-5  text-white" />
             </div>
             <div className="">
               <p className=" font-bold text-slate-700 mb-1">Our Location</p>
-              <p className="text-slate-900">Ahmedabad, Gujarat</p>
+              <p className="text-slate-900 ">Ahmedabad, Gujarat</p>
             </div>
           </div>
         </div>

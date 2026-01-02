@@ -26,7 +26,7 @@ const Header = () => {
           {/* Logo */} 
           <Link to="/" className="relative z-50 lg:mt-20 mt-12">
             <div className="p-0.5 rounded-xl bg-linear-to-br from-[#4d633c]/90 via-[#6b8e4e]/80 to-[#c09745]/80 shadow-lg">
-              <img
+              <img  
                 src={Logo}
                 alt="Urban Gam Logo"
                 className="w-20 lg:w-34 rounded-xl border-2 border-white/40 bg-white/80"
@@ -41,7 +41,7 @@ const Header = () => {
                 key={item.name}
                 to={item.path}
                 className={({ isActive }) =>
-                  `text-sm font-medium transition-colors ${
+                  `text-lg font-medium transition-colors ${
                     isActive
                       ? "text-[#4d633c]"
                       : "text-slate-700 hover:text-[#4d633c]"
@@ -58,7 +58,7 @@ const Header = () => {
           {/* Desktop CTA */}
           <Link
             to="/contactus"
-            className="hidden lg:inline-flex px-5 py-3 text-sm font-semibold rounded-full bg-color text-white hover:bg-[#3e5231] transition"
+            className="hidden lg:inline-flex px-5 py-3 text-lg font-semibold rounded-full bg-color text-white hover:bg-[#3e5231] transition"
           >
             Enquire Now
           </Link>

@@ -79,7 +79,7 @@ const LocationLuxury = () => {
                   <IoCompassOutline size={24} />
                 </div>
                 <h4 className="text-3xl lg:text-5xl">Emerging Corridor</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">
+                <p className="text-slate-500 leading-relaxed">
                   The Bavla-Kanotar belt is the new frontier for luxury escapes.
                   As the city expands southward, this corridor is projected to
                   see significant infrastructure appreciation.
@@ -91,7 +91,7 @@ const LocationLuxury = () => {
                   <IoLeafOutline size={24} />
                 </div>
                 <h4 className="text-3xl lg:text-5xl">Farmland Heritage</h4>
-                <p className="text-slate-500 text-sm leading-relaxed">
+                <p className="text-slate-500 leading-relaxed">
                   Unlike concrete-heavy developments, our location is preserved
                   within open farmlands, ensuring your view remains green
                   forever.

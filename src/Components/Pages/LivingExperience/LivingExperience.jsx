@@ -47,7 +47,7 @@ const LivingExperience = () => {
                 <h3 className="text-[#b4a14c] font-bold tracking-[0.3em] uppercase text-sm mb-4">
                   The Living Experience
                 </h3>
-                <h2 className="text-5xl lg:text-7xl text-slate-900">
+                <h2 className="text-5xl lg:text-8xl text-slate-900">
                   Calm, Intentional, <br />
                   <span className="text-color">
                     Unhurried.
@@ -125,11 +125,11 @@ const LivingExperience = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-[#4d633c]">
+      <section className="py-24 bg-[#344428]">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-0 border border-white/10 rounded-[3rem] overflow-hidden">
           {values.map((v, i) => (
-            <div key={i} className="p-16 border-r border-white/10 last:border-0 hover:bg-white/5 transition-colors group bg-white/20">
+            <div key={i} className="p-10 border-r border-white/10 last:border-0 hover:bg-white/5 transition-colors group bg-white/10">
               <div className="text-[#b4a14c] text-5xl mb-8 group-hover:scale-110 transition-transform bg-white table p-2 rounded-full">
                 {v.icon}
               </div>

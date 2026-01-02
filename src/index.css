@@ -1,28 +1,26 @@
- @import "tailwindcss";
+@import "tailwindcss";
 
- 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo Bhai 2", sans-serif;
+  top: 0px !important;
+}
 
- body{
-    margin: 0;
-    padding: 0;
-     font-family: "Poppins", sans-serif;
-      top: 0px !important;
- }
-
- .text-color{
-    background: linear-gradient(to bottom, #b4a14c 0%, #4d633c 80%);
+.text-color {
+  background: linear-gradient(to bottom, #b4a14c 0%, #4d633c 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-weight: 600; /* Looks better with bold text */
- }
- 
- .bg-color{
-   background: linear-gradient(135deg, #b4a14c 0%, #4d633c 50%); 
-    color: white;
- }
+  font-weight: 600;
+}
 
- .VIpgJd-yAWNEb-L7lbkb {
+.bg-color {
+  background: linear-gradient(135deg, #b4a14c 0%, #4d633c 50%);
+  color: white;
+}
+
+.VIpgJd-yAWNEb-L7lbkb {
   display: none !important;
 }
 .VIpgJd-ZVi9od-ORHb-OEVmcd {

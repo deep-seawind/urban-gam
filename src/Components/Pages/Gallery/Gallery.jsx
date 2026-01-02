@@ -113,7 +113,7 @@ const Gallery = () => {
                     setActiveCategory(cat);
                     setSelectedIndex(null);
                   }}
-                  className={`px-6 py-3 rounded-full text-[12px] font-semibold tracking-widest transition-all duration-500 border ${
+                  className={`px-6 py-3 rounded-full text-sm font-semibold tracking-widest transition-all duration-500 border ${
                     activeCategory === cat
                       ? "bg-[#c09745] text-white border-[#c09745]"
                       : "bg-white text-slate-500 border-slate-200"

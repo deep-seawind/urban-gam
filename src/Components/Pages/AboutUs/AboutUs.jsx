@@ -33,7 +33,7 @@ const AboutUs = () => {
 
   return (
     <>
-      <Breadcrumb items={[{ label: "The Philosophy" }]} />
+      <Breadcrumb items={[{ label: "About Us" }]} />
 
       <section className="relative bg-[#FCFCFA] py-14 lg:py-20 overflow-hidden text-slate-900">
         {/* Editorial Watermark */}
@@ -66,7 +66,7 @@ const AboutUs = () => {
               <div className="p-10 bg-white border border-slate-100 rounded-[3rem] shadow-sm relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#4d633c]/5 rounded-full -mr-16 -mt-16" />
                 <h4 className="text-lg font-bold mb-4">The Long-Term Vision</h4>
-                <p className="text-slate-500 text-sm leading-relaxed ">
+                <p className="text-slate-500 text-lg leading-relaxed ">
                   "Our vision is to build a repeatable brand of managed luxury
                   retreats. We don't just sell plots; we curate a lifestyle that
                   remains disciplined, beautiful, and valuable for decades to
@@ -90,7 +90,7 @@ const AboutUs = () => {
                   {item.icon}
                 </div>
                 <h3 className="text-2xl   mb-6">{item.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed  mb-8">
+                <p className="text-slate-500 text-lg leading-relaxed  mb-8">
                   {item.desc}
                 </p>
                 <span className="text-5xl  text-slate-100 group-hover:text-[#c09745]/30 transition-colors">
@@ -108,7 +108,7 @@ const AboutUs = () => {
                   Building Trust
                 </h3>
                 <h2 className="text-4xl lg:text-5xl  mb-10 leading-tight">
-                  Unwavering <br /> <span className=" ">Discipline.</span>
+                  Unwavering  <span className=" ">Discipline.</span>
                 </h2>
                 <div className="space-y-8">
                   <div className="flex gap-6">
@@ -117,7 +117,7 @@ const AboutUs = () => {
                       <h4 className="font-bold text-lg mb-2">
                         Quality Assurance
                       </h4>
-                      <p className="text-white/60 text-sm leading-relaxed ">
+                      <p className="text-white/60 text-lg leading-relaxed ">
                         Every brick and landscape contour is vetted by project
                         architects to meet 5-star hospitality benchmarks.
                       </p>
@@ -129,7 +129,7 @@ const AboutUs = () => {
                       <h4 className="font-bold text-lg mb-2">
                         Operational Integrity
                       </h4>
-                      <p className="text-white/60 text-sm leading-relaxed ">
+                      <p className="text-white/60 text-lg leading-relaxed ">
                         Our managed model ensures that the community doesn't
                         just look good at launch, but thrives through
                         professional operator roles.
@@ -202,8 +202,7 @@ const AboutUs = () => {
                   <p className="text-slate-500 leading-relaxed font-light text-lg">
                     <span className="text-slate-900 font-bold ">
                       Commitment to Quality:
-                    </span>
-                    We utilize a professional operator model, ensuring that our
+                    </span>   We utilize a professional operator model, ensuring that our
                     resorts function with the precision of a 5-star hotel.
                   </p>
                 </div>
@@ -212,8 +211,7 @@ const AboutUs = () => {
                   <p className="text-slate-500 leading-relaxed font-light text-lg">
                     <span className="text-slate-900 font-bold ">
                       Discipline:
-                    </span>
-                    Our phased development isn't just a timeline; it's a promise
+                    </span>  Our phased development isn't just a timeline; it's a promise
                     of controlled growth and maintained exclusivity.
                   </p>
                 </div>

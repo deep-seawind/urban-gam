@@ -61,7 +61,7 @@ const EventsCelebrations = () => {
 
   return (
     <>
-      <Breadcrumb items={[{ label: "Managed Living & Rentals" }]} />
+      <Breadcrumb items={[{ label: "Events & Celebrations" }]} />
 
       <section className="bg-[#fdfdfb] py-24 overflow-hidden">
         <div className="container mx-auto px-6">
@@ -79,7 +79,7 @@ const EventsCelebrations = () => {
                 Stories.
               </h2>
             </div>
-            <p className="text-slate-500 max-w-lg pb-2 border-l-2 border-[#b4a14c] pl-6 my-auto">
+            <p className="text-slate-500 max-w-lg pb-2 border-l-2 border-[#b4a14c] pl-6 my-auto text-lg">
               From intimate gatherings to grand celebrations, we provide the
               canvas for your most cherished moments.
             </p>
@@ -100,7 +100,7 @@ const EventsCelebrations = () => {
                 <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
 
                 <div className="absolute inset-0 p-10 flex flex-col justify-end text-white">
-                  <div className="w-12 h-12 rounded-2xl bg-[#b4a14c] flex items-center justify-center text-2xl mb-4 group-hover:rotate-360 transition-transform duration-700">
+                  <div className="w-12 h-12 rounded-2xl bg-[#b4a14c] flex items-center justify-center text-4xl mb-4 group-hover:rotate-360 transition-transform duration-700">
                     {type.icon}
                   </div>
                   <h4 className="text-2xl font-bold mb-2">{type.title}</h4>
@@ -122,10 +122,10 @@ const EventsCelebrations = () => {
                 <div className="text-3xl text-[#4d633c] mb-4 group-hover:text-[#b4a14c] transition-colors">
                   {f.icon}
                 </div>
-                <h5 className="font-bold text-slate-900 group-hover:text-white mb-1 transition-colors">
+                <h5 className="font-bold text-slate-900 group-hover:text-white mb-1 transition-colors text-xl">
                   {f.name}
                 </h5>
-                <p className="text-xs text-slate-400 group-hover:text-white/60 transition-colors uppercase tracking-widest">
+                <p className="text-lg text-slate-600 group-hover:text-white/60 transition-colors ">
                   {f.detail}
                 </p>
               </div>
@@ -143,7 +143,7 @@ const EventsCelebrations = () => {
                 Ready to host your <br />
                 <span className="">Masterpiece?</span>
               </h2>
-              <p className="text-white/60 mb-10 leading-relaxed">
+              <p className="text-white mb-10 leading-relaxed text-lg">
                 Our event concierge is ready to assist you in planning every
                 detail of your visit.
               </p>
