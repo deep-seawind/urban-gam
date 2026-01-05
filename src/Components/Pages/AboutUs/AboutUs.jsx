@@ -6,7 +6,7 @@ import {
   FiAnchor,
   FiRepeat,
 } from "react-icons/fi";
-import Logo from "../../../assets/logo/logo.jpg";
+import Logo from "../../../assets/logo/YUG-logo.png";
 import Breadcrumb from "../../../Common/Breadcrumb/Breadcrumb";
 
 const AboutUs = () => {
@@ -37,7 +37,7 @@ const AboutUs = () => {
 
       <section className="relative bg-[#FCFCFA] py-14 lg:py-20 overflow-hidden text-slate-900">
         {/* Editorial Watermark */}
-        <div className="absolute top-10 left-30 text-[18vw] font-bold text-slate-100/80 select-none pointer-events-none leading-none">
+        <div className="absolute -top-10 left-30 text-[18vw] font-bold text-slate-100/80 select-none pointer-events-none leading-none">
           About Us
         </div>
 

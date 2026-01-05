@@ -49,7 +49,7 @@ const CityHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
                 hoveredSide === "city" ? "text-sky-400" : "text-white"
               }`}
             >
-              City <span className="font-light opacity-80">| શહેર</span>
+              City <span className="font-light  ">| શહેર</span>
             </span>
           </h2>
 
@@ -58,10 +58,10 @@ const CityHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
             ambition.
           </p>
 
-          <Link to={"/about"}>
+          <Link to={"/urban-gam"}>
             <button className="flex items-center gap-4 text-white cursor-pointer">
-              <span className="font-semibold text-sm tracking-widest uppercase">
-                Explore City
+              <span className="font-semibold  text-xl">
+                Explore URBAN ગામ
               </span>
               <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center">
                 <FiArrowRight />

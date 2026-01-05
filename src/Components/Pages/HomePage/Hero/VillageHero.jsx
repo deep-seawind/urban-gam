@@ -49,7 +49,7 @@ const VillageHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
                 hoveredSide === "village" ? "text-amber-400" : "text-white"
               }`}
             >
-              Village <span className="font-light opacity-80">| ગામ</span>
+              Village <span className="font-light  ">| ગામ</span>
             </span>
           </h2>
 
@@ -58,10 +58,10 @@ const VillageHero = ({ hoveredSide, setHoveredSide, isMobile }) => {
             Where peace finds its home.
           </p>
 
-          <Link to={"/about"}>
-            <button className="flex items-center gap-4 text-white justify-end cursor-pointer">
-              <span className="font-semibold text-sm tracking-widest uppercase">
-                Discover Village
+           <Link to={"/urban-gam"}>
+            <button className="flex items-center  gap-4 text-white cursor-pointer">
+              <span className="font-semibold  text-xl">
+                Explore URBAN ગામ
               </span>
               <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center">
                 <FiArrowRight />

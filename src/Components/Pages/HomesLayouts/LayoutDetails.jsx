@@ -9,12 +9,11 @@ import {
 } from "react-icons/hi2";
 import { FiArrowLeft, FiDownload, FiCheckCircle } from "react-icons/fi";
 import Breadcrumb from "../../../Common/Breadcrumb/Breadcrumb";
+import { Link } from "react-router-dom";
 
 const LayoutDetails = ({ plotSize = "500 sq yd" }) => {
   const [activeFloor, setActiveFloor] = useState("ground");
   const [activePlot, setActivePlot] = useState("250 sq yd");
-
- 
 
   // Content Mapping based on Plot Size
   const data = {
@@ -50,29 +49,32 @@ const LayoutDetails = ({ plotSize = "500 sq yd" }) => {
         "A boundary-less feel where the architecture dissolves into the surrounding forest.",
     },
   };
-  
-   const currentData = data[activePlot];
+
+  const currentData = data[activePlot];
   const current = data[plotSize] || data["500 sq yd"];
 
   return (
     <>
-      <Breadcrumb items={[  { label: currentData?.title }]} />
+      <Breadcrumb items={[{ label: currentData?.title }]} />
 
       <div className="bg-[#FCFCFA] min-h-screen pb-20 text-slate-900">
         {/* 1. MINIMAL NAVIGATION */}
         <nav className="p-8 flex justify-between items-center container mx-auto">
-          <button className="flex items-center gap-2 text-xs font-bold tracking-widest text-slate-400 hover:text-[#c09745] transition-colors ">
+          <button className="flex items-center gap-2 text-sm font-bold tracking-widest text-slate-500 hover:text-[#c09745] transition-colors ">
             <FiArrowLeft /> Back to Layouts
           </button>
           <div className="text-center">
-            <span className="block text-[10px] font-black tracking-[0.4em] text-[#c09745] ">
+            <span className="block text-sm font-black text-[#c09745] ">
               URBAN ગામ Standard
             </span>
-            <span className="text-sm   text-slate-500">{plotSize} Series</span>
+            <span className="text-sm  text-slate-600">{plotSize} Series</span>
           </div>
-          <button className="px-6 py-2 border border-slate-200 rounded-full text-[10px] font-bold tracking-widest hover:bg-slate-900 hover:text-white transition-all">
-            ENQUIRE
-          </button>
+
+          <Link to={"/enquire-form"} state={{ interest: "Buying a Home" }}>
+            <button className="px-8 py-2.5  text-white bg-[#4d633c] rounded-full font-bold hover:bg-slate-900 hover:text-white transition-all cursor-pointer">
+              Enquire
+            </button>
+          </Link>
         </nav>
 
         {/* 2. HERO SECTION (TECHNICAL SPLIT) */}
@@ -81,7 +83,6 @@ const LayoutDetails = ({ plotSize = "500 sq yd" }) => {
             <h1 className="text-5xl lg:text-7xl font-light ">
               {current.title.split(" ")[0]}
               <span className="text-color">
-                 
                 {current.title.split(" ").slice(1).join(" ")}
               </span>
             </h1>
@@ -112,13 +113,13 @@ const LayoutDetails = ({ plotSize = "500 sq yd" }) => {
                 className="w-full h-full object-cover"
                 alt="Interior Detail"
               />
-            </div> 
+            </div>
           </div>
         </header>
 
         {/* 3. INTERACTIVE PLAN VIEWER */}
-        <section className="container mx-auto px-6 lg:px-12 py-16">
-          <div className="bg-white rounded-[4rem] p-12 lg:p-20 shadow-sm border border-slate-100">
+        <section className="container mx-auto px-6 lg:px-0 py-10">
+          <div className="bg-white rounded-[4rem] p-12 lg:p-10 shadow-sm border border-slate-100">
             <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-20">
               <div>
                 <h2 className="text-4xl  mb-4">Sample Layout</h2>
@@ -154,11 +155,11 @@ const LayoutDetails = ({ plotSize = "500 sq yd" }) => {
             <div className="grid lg:grid-cols-12 gap-20 items-center">
               <div className="lg:col-span-8 bg-[#f8f9fa] rounded-[3rem] p-12 aspect-4/2 flex items-center justify-center border-2 border-dashed border-slate-200 group">
                 <div className="text-center">
-                  <HiOutlineMap className="text-6xl text-slate-200 mb-4 mx-auto group-hover:text-[#c09745] transition-colors" />
-                  <p className="text-slate-300  ">
+                  <HiOutlineMap className="text-6xl text-slate-400 mb-4 mx-auto group-hover:text-[#c09745] transition-colors" />
+                  <p className="text-slate-400  ">
                     Blueprints are exclusive to registered members.
                   </p>
-                  <button className="mt-6 flex items-center gap-2 mx-auto text-[10px] font-bold text-[#c09745] tracking-[0.2em] ">
+                  <button className="mt-6 flex items-center gap-2 mx-auto text-[15px] font-bold text-[#c09745] ">
                     <FiDownload /> Request High-Res PDF
                   </button>
                 </div>
@@ -166,17 +167,17 @@ const LayoutDetails = ({ plotSize = "500 sq yd" }) => {
 
               <div className="lg:col-span-4 space-y-12">
                 <div>
-                  <h4 className="flex items-center gap-2 text-[#c09745] text-[10px] font-bold tracking-widest  mb-6">
+                  <h4 className="flex items-center gap-2 text-[#c09745] font-semibold mb-6">
                     <HiOutlineUserGroup className="text-lg" /> Ideal Buyer
                     Profile
                   </h4>
-                  <p className="text-slate-600 text-sm leading-relaxed">
+                  <p className="text-slate-600 leading-relaxed">
                     {current.profile}
                   </p>
                 </div>
 
                 <div className="space-y-6">
-                  <h4 className="text-[#c09745] text-[10px] font-bold tracking-widest ">
+                  <h4 className="text-[#c09745] font-semibold ">
                     Key Built-up Options
                   </h4>
                   {current.highlights.map((h, i) => (
@@ -195,14 +196,14 @@ const LayoutDetails = ({ plotSize = "500 sq yd" }) => {
 
         {/* 4. DESIGN RULES (THE "DISCIPLINE") */}
         <section className="container mx-auto px-6 lg:px-0 text-center py-10">
-          <div className="inline-block p-4 rounded-full bg-[#4d633c]/5 mb-8">
-            <HiOutlineHomeModern className="text-3xl text-[#4d633c]" />
+          <div className="inline-block p-4 rounded-full bg-[#4d633c] mb-8">
+            <HiOutlineHomeModern className="text-3xl text-white" />
           </div>
           <h2 className="text-4xl  mb-8">Architectural Guardianship</h2>
           <p className="text-slate-500 leading-relaxed mb-12">
             To preserve the "ગામ" aesthetic and protect your long-term
-            investment, we enforce{" "}
-            <span className="text-slate-900 font-bold underline decoration-[#c09745]">
+            investment, we enforce
+            <span className="text-slate-900 font-bold underline decoration-[#c09745] ml-1">
               Limited Customization
             </span>
             . Owners can customize interiors entirely, but external facades and
@@ -220,7 +221,7 @@ const LayoutDetails = ({ plotSize = "500 sq yd" }) => {
                 <div className="text-[#c09745] text-xl mb-2 flex justify-center">
                   {rule.icon}
                 </div>
-                <span className="text-sm font-bold   text-slate-400 group-hover:text-slate-900 transition-colors">
+                <span className=" font-semibold   text-slate-500 group-hover:text-slate-900 transition-colors">
                   {rule.label} Controlled
                 </span>
               </div>

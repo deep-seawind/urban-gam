@@ -57,7 +57,7 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <Link
-            to="/contactus"
+            to="/enquire-form"
             className="hidden lg:inline-flex px-5 py-3 text-lg font-semibold rounded-full bg-color text-white hover:bg-[#3e5231] transition"
           >
             Enquire Now

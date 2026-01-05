@@ -242,8 +242,8 @@ const Footer = () => {
       <div className="bg-[#5e6c36] py-3 relative  ">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-white/80 text-sm font-medium">
-              © {currentYear} URBAN ગામ
+            <p className="text-white/80 font-medium">
+              © {currentYear} All Rights Reserved Design & Developed by <span><Link to={"https://www.seawindsolution.com/"} target="_blank" className=" font-extrabold border-b">Seawind Solution Pvt. Ltd</Link></span>
             </p>
             <div className="flex items-center gap-5">
               {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
@@ -251,7 +251,7 @@ const Footer = () => {
                   <a
                     key={item}
                     href="#"
-                    className="text-white/80 hover:text-white text-xs tracking-wider transition-colors"
+                    className="text-white/80 hover:text-white   transition-colors"
                   >
                     {item}
                   </a>

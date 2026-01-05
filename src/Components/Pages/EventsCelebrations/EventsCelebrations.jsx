@@ -1,18 +1,12 @@
 import React from "react";
+import { FiCalendar, FiUsers, FiMapPin, FiArrowRight } from "react-icons/fi";
 import {
-  FiCalendar,
-  FiUsers,
-  FiMapPin,
-  FiCamera,
-  FiArrowRight,
-} from "react-icons/fi";
-import {
-  IoDiamondOutline,
   IoWineOutline,
   IoBriefcaseOutline,
   IoHeartOutline,
 } from "react-icons/io5";
 import Breadcrumb from "../../../Common/Breadcrumb/Breadcrumb";
+import { Link } from "react-router-dom";
 
 const EventsCelebrations = () => {
   const eventTypes = [
@@ -134,44 +128,37 @@ const EventsCelebrations = () => {
 
           {/* Action / CTA Section */}
           <div className="relative rounded-4xl lg:rounded-[4rem] bg-color overflow-hidden">
-
             <div className="grid grid-cols-1 lg:grid-cols-2">
-
               <div className="p-12 lg:p-20 ">
-                 <div className="relative z-10 max-w-xl">
-              <h2 className="text-4xl lg:text-5xl text-white mb-8">
-                Ready to host your <br />
-                <span className="">Masterpiece?</span>
-              </h2>
-              <p className="text-white mb-10 leading-relaxed text-lg">
-                Our event concierge is ready to assist you in planning every
-                detail of your visit.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-10 py-5 bg-[#b4a14c] text-white rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-[#4d633c] transition-all group">
-                  Plan Your Event{" "}
-                  <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
-                </button>
-                <button className="px-10 py-5 border border-white/20 text-white rounded-2xl font-bold hover:bg-white hover:text-slate-900 transition-all">
-                  Download Brochure
-                </button>
-              </div>
-            </div>
+                <div className="relative z-10 max-w-xl">
+                  <h2 className="text-4xl lg:text-5xl text-white mb-8">
+                    Ready to host your <br />
+                    <span className="">Masterpiece?</span>
+                  </h2>
+                  <p className="text-white mb-10 leading-relaxed text-lg">
+                    Our event concierge is ready to assist you in planning every
+                    detail of your visit.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Link to={"/enquire-form"} state={{interest:"Event / Wedding"}}>
+                      <button className="px-10 py-5 bg-white text-[#4d633c] rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-[#4d633c] hover:text-white transition-all group cursor-pointer">
+                        Plan Your Event{" "}
+                        <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
+                      </button>
+                    </Link>
+                  </div>
+                </div>
               </div>
 
               <div className="">
-                 <img
-                src="https://i.pinimg.com/1200x/76/84/95/768495900637d1560a82f74ac0ecff78.jpg"
-                className="w-full h-120 object-cover"
-                alt="Event Enquiry"
-              />
+                <img
+                  src="https://i.pinimg.com/1200x/76/84/95/768495900637d1560a82f74ac0ecff78.jpg"
+                  className="w-full h-120 object-cover"
+                  alt="Event Enquiry"
+                />
               </div>
             </div>
-            <div className="absolute right-0 top-0 h-full w-1/2  pointer-events-none">
-             
-            </div>
-
-           
+            <div className="absolute right-0 top-0 h-full w-1/2  pointer-events-none"></div>
           </div>
         </div>
       </section>

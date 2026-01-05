@@ -19,17 +19,19 @@ import Location from "../Components/Pages/Location/Location";
 import Investment from "../Components/Pages/Investment/Investment";
 import LayoutDetails from "../Components/Pages/HomesLayouts/LayoutDetails";
 import GoogleTranslate from "../language/GoogleTranslate";
+import UrbanGam from "../Components/Pages/UrbanGam/UrbanGam";
+import EnquireForm from "../Components/Pages/EnquireForm/EnquireForm";
 
 const MainRouter = () => {
   const location = useLocation();
   const hideHeader = location.pathname === "/";
   return (
     <>
+      <GoogleTranslate />
       {!hideHeader && <Header />}
 
       <ScrollToTop />
-       <GoogleTranslate/>
-       <ContactActionButtons />
+      <ContactActionButtons />
       <Routes>
         <Route path="/" element={<Home />} />
 
@@ -46,6 +48,8 @@ const MainRouter = () => {
         <Route path="/wellness" element={<Wellness />} />
         <Route path="/location" element={<Location />} />
         <Route path="/investment" element={<Investment />} />
+        <Route path="/urban-gam" element={<UrbanGam />} />
+        <Route path="/enquire-form" element={<EnquireForm />} />
 
         {/* Fallback route */}
         <Route path="*" element={<Navigate to="/" replace />} />
